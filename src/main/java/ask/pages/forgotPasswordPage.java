@@ -1,5 +1,5 @@
 package ask.pages;
 
-public class forgotPasswordPage {
+public class ForgotPasswordPage {
 
 }
