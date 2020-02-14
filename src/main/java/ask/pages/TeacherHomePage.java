@@ -13,6 +13,22 @@ public class TeacherHomePage extends Base {
 	@FindBy(xpath="//p[text()='TEACHER'] ")
 	WebElement teacherLable;
 	
+	@FindBy(xpath="//h5[text()='Log Out']")
+	WebElement logOutButton;
+	
+	@FindBy(xpath="//span[text()='Log Out']//parent::button")
+	WebElement confirmLogOutButton;
+	
+	public void clickConfirmLogOutButton() {
+		confirmLogOutButton.click();
+	
+	}
+	
+	public void clickLogOutButton() {
+		logOutButton.click();
+	
+	}
+	
 	public boolean getTeacherLabel() {
 		teacherLable.isDisplayed();
 		return true;

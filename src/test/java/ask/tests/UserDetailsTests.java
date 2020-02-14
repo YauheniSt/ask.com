@@ -43,6 +43,9 @@ public class UserDetailsTests extends Base {
 		Thread.sleep(3000);
 		softAssert.assertTrue(userDetailsPage.getTEACHERlabel(), "Teacher is not present");
 		softAssert.assertAll();
+		teacherHomePage.clickLogOutButton();
+		teacherHomePage.clickConfirmLogOutButton();
+		
 		
 	}
 
