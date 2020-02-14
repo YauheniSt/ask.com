@@ -1,85 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="31032" started-at="2020-02-13T05:57:12Z" finished-at="2020-02-13T05:57:43Z">
+  <suite name="Default suite" duration-ms="11434" started-at="2020-02-14T00:38:10Z" finished-at="2020-02-14T00:38:22Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="31032" started-at="2020-02-13T05:57:12Z" finished-at="2020-02-13T05:57:43Z">
-      <class name="ask.tests.LoginTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:ask.tests.LoginTests@4ec6a292]" name="setUp" is-config="true" duration-ms="7366" started-at="2020-02-12T23:57:12Z" finished-at="2020-02-12T23:57:20Z">
+    <test name="Default test" duration-ms="11434" started-at="2020-02-14T00:38:10Z" finished-at="2020-02-14T00:38:22Z">
+      <class name="ask.tests.UserDetailsTests">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:ask.tests.UserDetailsTests@35851384]" name="setUp" is-config="true" duration-ms="8180" started-at="2020-02-13T18:38:10Z" finished-at="2020-02-13T18:38:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginTC(java.lang.String, java.lang.String)[pri:0, instance:ask.tests.LoginTests@4ec6a292]" name="loginTC" duration-ms="5843" started-at="2020-02-12T23:57:20Z" data-provider="getData" finished-at="2020-02-12T23:57:26Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[stashaniny@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Tel6051443]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="convertStudentToTeacherTest_658()[pri:0, instance:ask.tests.UserDetailsTests@35851384]" name="convertStudentToTeacherTest_658" duration-ms="3243" started-at="2020-02-13T18:38:19Z" finished-at="2020-02-13T18:38:22Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginTC -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:ask.tests.LoginTests@4ec6a292]" name="tearDown" is-config="true" duration-ms="785" started-at="2020-02-12T23:57:26Z" finished-at="2020-02-12T23:57:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:ask.tests.LoginTests@4ec6a292]" name="setUp" is-config="true" duration-ms="6166" started-at="2020-02-12T23:57:26Z" finished-at="2020-02-12T23:57:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginTC(java.lang.String, java.lang.String)[pri:0, instance:ask.tests.LoginTests@4ec6a292]" name="loginTC" duration-ms="1381" started-at="2020-02-12T23:57:33Z" data-provider="getData" finished-at="2020-02-12T23:57:34Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[stashaniny@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Tel605144]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginTC -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:ask.tests.LoginTests@4ec6a292]" name="tearDown" is-config="true" duration-ms="829" started-at="2020-02-12T23:57:34Z" finished-at="2020-02-12T23:57:35Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:ask.tests.LoginTests@4ec6a292]" name="setUp" is-config="true" duration-ms="6379" started-at="2020-02-12T23:57:35Z" finished-at="2020-02-12T23:57:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginTC(java.lang.String, java.lang.String)[pri:0, instance:ask.tests.LoginTests@4ec6a292]" name="loginTC" duration-ms="1420" started-at="2020-02-12T23:57:41Z" data-provider="getData" finished-at="2020-02-12T23:57:43Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[stashanin@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Tel6051443]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginTC -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:ask.tests.LoginTests@4ec6a292]" name="tearDown" is-config="true" duration-ms="829" started-at="2020-02-12T23:57:43Z" finished-at="2020-02-12T23:57:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- ask.tests.LoginTests -->
+        </test-method> <!-- convertStudentToTeacherTest_658 -->
+      </class> <!-- ask.tests.UserDetailsTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

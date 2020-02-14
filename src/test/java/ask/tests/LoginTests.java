@@ -29,7 +29,7 @@ public class LoginTests extends Base {
 
 		loginPage.login(email, password);
 		try {
-			//Assert.assertTrue(loginPage.getErrorMessageRequiredField());
+			// Assert.assertTrue(loginPage.getErrorMessageRequiredField());
 			Assert.assertTrue(loginPage.getAuthenticationFailed());
 		} catch (NoSuchElementException As) {
 
@@ -42,11 +42,11 @@ public class LoginTests extends Base {
 
 		Object[][] data = new Object[3][2];
 		data[0][0] = "stashaniny@gmail.com";
-		data[0][1] = "Tel6051443";		
-			
+		data[0][1] = "Tel6051443";
+
 		data[1][0] = "stashaniny@gmail.com";
 		data[1][1] = "Tel605144";
-		
+
 		data[2][0] = "stashanin@gmail.com";
 		data[2][1] = "Tel6051443";
 		return data;

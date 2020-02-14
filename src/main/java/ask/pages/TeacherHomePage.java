@@ -17,5 +17,13 @@ public class TeacherHomePage extends Base {
 		teacherLable.isDisplayed();
 		return true;
 	}
+	
+	@FindBy(xpath="//h5[text()='Users Management']")
+	WebElement usersManagementLink;
+	
+	public UsersManagementPage clickUsersManagementLink() {
+		usersManagementLink.click();
+		return new UsersManagementPage();
+	}
 
 }
