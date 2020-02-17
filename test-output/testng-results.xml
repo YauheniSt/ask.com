@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="12082" started-at="2020-02-14T01:09:09Z" finished-at="2020-02-14T01:09:22Z">
+  <suite name="Default suite" duration-ms="14585" started-at="2020-02-15T16:40:16Z" finished-at="2020-02-15T16:40:31Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="12082" started-at="2020-02-14T01:09:09Z" finished-at="2020-02-14T01:09:22Z">
+    <test name="Default test" duration-ms="14585" started-at="2020-02-15T16:40:16Z" finished-at="2020-02-15T16:40:31Z">
       <class name="ask.tests.UserDetailsTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:ask.tests.UserDetailsTests@35851384]" name="setUp" is-config="true" duration-ms="8654" started-at="2020-02-13T19:09:09Z" finished-at="2020-02-13T19:09:18Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:ask.tests.UserDetailsTests@35851384]" name="setUp" is-config="true" duration-ms="10829" started-at="2020-02-15T10:40:16Z" finished-at="2020-02-15T10:40:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="convertStudentToTeacherTest_658()[pri:0, instance:ask.tests.UserDetailsTests@35851384]" name="convertStudentToTeacherTest_658" duration-ms="3418" started-at="2020-02-13T19:09:18Z" finished-at="2020-02-13T19:09:22Z">
+        <test-method status="PASS" signature="convertStudentToTeacherTest_658()[pri:0, instance:ask.tests.UserDetailsTests@35851384]" name="convertStudentToTeacherTest_658" duration-ms="3737" started-at="2020-02-15T10:40:27Z" finished-at="2020-02-15T10:40:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- convertStudentToTeacherTest_658 -->

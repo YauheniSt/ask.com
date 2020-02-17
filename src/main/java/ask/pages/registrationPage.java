@@ -1,5 +1,5 @@
 package ask.pages;
 
-public class registrationPage {
+public class RegistrationPage {
 
 }
