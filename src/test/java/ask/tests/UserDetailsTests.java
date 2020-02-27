@@ -1,6 +1,7 @@
 package ask.tests;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -37,12 +38,15 @@ public class UserDetailsTests extends Base {
 	}
 	@Test
 	public void convertStudentToTeacherTest_658() throws InterruptedException {
+		
 		userDetailsPage.clickOptionsButton();
 		userDetailsPage.clickChangeUsersRoleButton();
 		userDetailsPage.clickSubmitChangeUsersRoleButton();	
-		Thread.sleep(3000);
-		softAssert.assertTrue(userDetailsPage.getTEACHERlabel(), "Teacher is not present");
-		softAssert.assertAll();
+		//Thread.sleep(3000);
+		//driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+		//softAssert.assertTrue(userDetailsPage.getTEACHERlabel(), "Teacher is not present");
+		//softAssert.assertAll();
+		Assert.assertTrue(userDetailsPage.getTEACHERlabel());
 		teacherHomePage.clickLogOutButton();
 		teacherHomePage.clickConfirmLogOutButton();
 		

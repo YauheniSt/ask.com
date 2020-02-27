@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [ask.com]" parallel="none">
+  <test name="Acceptance(failed)" parallel="none">
+    <classes>
+      <class name="ask.tests.LoginTests">
+        <methods>
+          <include name="loginAsTeacherTC"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- ask.tests.LoginTests -->
+      <class name="ask.tests.ListOfQuizzesTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- ask.tests.ListOfQuizzesTest -->
+    </classes>
+  </test> <!-- Acceptance(failed) -->
+</suite> <!-- Failed suite [ask.com] -->

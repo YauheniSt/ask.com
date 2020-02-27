@@ -1,21 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" total="3" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14585" started-at="2020-02-15T16:40:16Z" finished-at="2020-02-15T16:40:31Z">
+  <suite name="Default suite" duration-ms="46007" started-at="2020-02-26T22:49:04Z" finished-at="2020-02-26T22:49:50Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="14585" started-at="2020-02-15T16:40:16Z" finished-at="2020-02-15T16:40:31Z">
-      <class name="ask.tests.UserDetailsTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:ask.tests.UserDetailsTests@35851384]" name="setUp" is-config="true" duration-ms="10829" started-at="2020-02-15T10:40:16Z" finished-at="2020-02-15T10:40:27Z">
+    <test name="Default test" duration-ms="46007" started-at="2020-02-26T22:49:04Z" finished-at="2020-02-26T22:49:50Z">
+      <class name="ask.tests.LoginTests">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:ask.tests.LoginTests@4ec6a292]" name="setUp" is-config="true" duration-ms="12361" started-at="2020-02-26T16:49:04Z" finished-at="2020-02-26T16:49:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="convertStudentToTeacherTest_658()[pri:0, instance:ask.tests.UserDetailsTests@35851384]" name="convertStudentToTeacherTest_658" duration-ms="3737" started-at="2020-02-15T10:40:27Z" finished-at="2020-02-15T10:40:31Z">
+        <test-method status="FAIL" signature="loginAsTeacherTC(java.lang.String, java.lang.String)[pri:0, instance:ask.tests.LoginTests@4ec6a292]" name="loginAsTeacherTC" duration-ms="5525" started-at="2020-02-26T16:49:16Z" data-provider="getData" finished-at="2020-02-26T16:49:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[stashaniny@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[12345]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+url is not correct]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+url is not correct
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:37)
+	at ask.tests.LoginTests.loginAsTeacherTC(LoginTests.java:44)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:207)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:178)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- convertStudentToTeacherTest_658 -->
-      </class> <!-- ask.tests.UserDetailsTests -->
+        </test-method> <!-- loginAsTeacherTC -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:ask.tests.LoginTests@4ec6a292]" name="tearDown" is-config="true" duration-ms="625" started-at="2020-02-26T16:49:21Z" finished-at="2020-02-26T16:49:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:ask.tests.LoginTests@4ec6a292]" name="setUp" is-config="true" duration-ms="11666" started-at="2020-02-26T16:49:22Z" finished-at="2020-02-26T16:49:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="loginAsTeacherTC(java.lang.String, java.lang.String)[pri:0, instance:ask.tests.LoginTests@4ec6a292]" name="loginAsTeacherTC" duration-ms="1148" started-at="2020-02-26T16:49:34Z" data-provider="getData" finished-at="2020-02-26T16:49:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[stashaniny@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Tel605144]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginAsTeacherTC -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:ask.tests.LoginTests@4ec6a292]" name="tearDown" is-config="true" duration-ms="658" started-at="2020-02-26T16:49:35Z" finished-at="2020-02-26T16:49:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:ask.tests.LoginTests@4ec6a292]" name="setUp" is-config="true" duration-ms="11956" started-at="2020-02-26T16:49:36Z" finished-at="2020-02-26T16:49:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="loginAsTeacherTC(java.lang.String, java.lang.String)[pri:0, instance:ask.tests.LoginTests@4ec6a292]" name="loginAsTeacherTC" duration-ms="1228" started-at="2020-02-26T16:49:48Z" data-provider="getData" finished-at="2020-02-26T16:49:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[stashanin@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[12345]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginAsTeacherTC -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:ask.tests.LoginTests@4ec6a292]" name="tearDown" is-config="true" duration-ms="816" started-at="2020-02-26T16:49:49Z" finished-at="2020-02-26T16:49:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- ask.tests.LoginTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
