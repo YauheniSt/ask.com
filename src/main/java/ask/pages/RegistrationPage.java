@@ -21,6 +21,10 @@ return registrationPageUrl;
 	@FindBy(xpath="//input[@placeholder='First Name']")
 	WebElement firstNameField;
 	
+	public void enterFirstName(String firstName) {
+		firstNameField.sendKeys(firstName);		
+	}
+	
 	@FindBy(xpath="//input[@placeholder='First Name']/../../following-sibling::div[2]//div//mat-error[text()='Whitespaces are not allowed']")
 	WebElement firstNameWhitespacesNotAallowedError;
 	
@@ -29,6 +33,10 @@ return registrationPageUrl;
 	
 	@FindBy(xpath="//input[@placeholder='Last Name']")
 	WebElement lastNameField;
+	
+	public void enterLastName(String lastName) {
+		lastNameField.sendKeys(lastName);		
+	}
 	
 	@FindBy(xpath="//input[@placeholder='Last Name']/../../following-sibling::div[2]//div//mat-error[text()='Whitespaces are not allowed']")
 	WebElement lastNameWhitespacesNotAallowedError;
@@ -39,6 +47,10 @@ return registrationPageUrl;
 	@FindBy(xpath="//input[@placeholder='Email']")
 	WebElement emailField;
 	
+	public void enterEmail(String email) {
+		emailField.sendKeys(email);		
+	}
+	
 	@FindBy(xpath="//input[@placeholder='Email']/../../following-sibling::div[2]//div//mat-error[text()='Should be a valid email address']")
 	WebElement shouldBeValidEmailError;
 	
@@ -48,12 +60,20 @@ return registrationPageUrl;
 	@FindBy(xpath="//input[@placeholder='Group Code']")
 	WebElement groupCodeField;
 	
+	public void enterGroupCode(String groupCode) {
+		groupCodeField.sendKeys(groupCode);		
+	}
+	
 	
 	@FindBy(xpath="//input[@placeholder='Group Code']/../../following-sibling::div[2]//div//mat-error")
 	WebElement groupCodeIsRequiredError;
 	
 	@FindBy(xpath="//input[@placeholder='Password']")
 	WebElement passwordField;
+	
+	public void enterPassword(String password) {
+		passwordField.sendKeys(password);		
+	}
 	
 	@FindBy(xpath="//input[@placeholder='Password']/../../following-sibling::div[2]//div//mat-error")
 	WebElement passwordIsRequiredError;
@@ -66,6 +86,10 @@ return registrationPageUrl;
 		
 	@FindBy(xpath="//input[@placeholder='Confirm Password']")
 	WebElement confirmPasswordField;
+	
+	public void enterConfirmedPassword(String confirmedPassword) {
+		confirmPasswordField.sendKeys(confirmedPassword);		
+	}
 	
 	@FindBy(xpath="//input[@placeholder='Confirm Password']/../../following-sibling::div[2]//div//mat-error")
 	WebElement confirmPasswordIsRequiredError;
@@ -81,6 +105,11 @@ return registrationPageUrl;
 			
 	@FindBy(xpath="//span[text()='Register Me']/..")
 	WebElement registerMeButton;
+	
+	public RegistrationConfirmationPage clickRegisterMeButton() {
+		registerMeButton.click();
+		return new RegistrationConfirmationPage();
+	}
 	
 	@FindBy(xpath="//span[text()='Back to Login']/..")
 	WebElement backToLoginButton;

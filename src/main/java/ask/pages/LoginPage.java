@@ -1,8 +1,12 @@
 package ask.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import ask.base.Base;
 
 public class LoginPage extends Base {
@@ -22,6 +26,18 @@ public class LoginPage extends Base {
 	WebElement errorMessageRequiredField;
 	@FindBy(xpath = "//div[text()='Authentication failed. User not found or password does not match']")
 	WebElement authenticationFailed;
+	@FindBy(xpath = "//span[text()='Register Now']/..")
+	WebElement registerNowButton;
+	
+	public RegistrationPage clickRegisterNowButton() {		
+		registerNowButton.click();
+		
+		return new RegistrationPage();
+	}
+	
+	
+	
+	
 	
 	public boolean getAuthenticationFailed() {
 		authenticationFailed.isDisplayed();

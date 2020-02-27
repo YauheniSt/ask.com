@@ -12,12 +12,15 @@ import org.testng.asserts.SoftAssert;
 import ask.base.Base;
 import ask.pages.LoginPage;
 import ask.pages.TeacherHomePage;
+import ask.util.Util;
 
 public class LoginTests extends Base {
 
 	LoginPage loginPage;
 	TeacherHomePage teacherHomePage;
     SoftAssert sa;
+    Util util;
+    String sheetName="LoginData";
 	
     @BeforeMethod
 	public void setUp() throws IOException {
@@ -25,10 +28,18 @@ public class LoginTests extends Base {
 		loginPage = new LoginPage();
 		teacherHomePage = new TeacherHomePage();
 		sa=new SoftAssert();
+		util=new Util();
 
 	}
+    @DataProvider
+    public Object[][] getLoginData() {
+    Object data[][]=util.getTestData(sheetName);
+    return data;
+    	
+    	
+    }
 
-	@Test(dataProvider = "getData")
+	@Test(dataProvider = "getLoginData")
 	public void loginAsTeacherTC(String email, String password) {
 
 		loginPage.login(email, password);
@@ -46,7 +57,7 @@ public class LoginTests extends Base {
 
 	
 
-	@DataProvider
+	/*@DataProvider
 	public Object[][] getData() {
 
 		Object[][] data = new Object[3][2];
@@ -59,9 +70,9 @@ public class LoginTests extends Base {
 		data[2][0] = "stashanin@gmail.com";
 		data[2][1] = "12345";
 		return data;
-	}
+	}*/
 
-	@AfterMethod(enabled=true)
+	@AfterMethod(enabled=false)
 	public void tearDown() {
 		driver.quit();
 	}
