@@ -29,6 +29,12 @@ public class LoginPage extends Base {
 	@FindBy(xpath = "//span[text()='Register Now']/..")
 	WebElement registerNowButton;
 	
+	public void waitForRegisterNowButtonAndClick() {
+		WebDriverWait wait=new WebDriverWait(driver, 10);
+	 wait.until(ExpectedConditions.visibilityOf(registerNowButton));
+		registerNowButton.click();
+		}
+	
 	public RegistrationPage clickRegisterNowButton() {		
 		registerNowButton.click();
 		

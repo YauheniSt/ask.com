@@ -25,6 +25,7 @@ public class LoginTests extends Base {
     @BeforeMethod
 	public void setUp() throws IOException {
 		browserInit();
+		launchApp();
 		loginPage = new LoginPage();
 		teacherHomePage = new TeacherHomePage();
 		sa=new SoftAssert();

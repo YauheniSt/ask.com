@@ -1,6 +1,7 @@
 package ask.pages;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -18,7 +19,9 @@ return registrationPageUrl;
 	@FindBy(xpath="//h4[text()='Registration']")
 	WebElement registrationLabel;
 		
+	
 	@FindBy(xpath="//input[@placeholder='First Name']")
+	@CacheLookup
 	WebElement firstNameField;
 	
 	public void enterFirstName(String firstName) {
@@ -32,6 +35,7 @@ return registrationPageUrl;
 	WebElement firstNameIsRequiredError;	
 	
 	@FindBy(xpath="//input[@placeholder='Last Name']")
+	@CacheLookup
 	WebElement lastNameField;
 	
 	public void enterLastName(String lastName) {
@@ -45,6 +49,7 @@ return registrationPageUrl;
 	WebElement lastNameIsRequiredError;
 	
 	@FindBy(xpath="//input[@placeholder='Email']")
+	@CacheLookup
 	WebElement emailField;
 	
 	public void enterEmail(String email) {
@@ -58,6 +63,7 @@ return registrationPageUrl;
 	WebElement emailIsRequiredError;
 		
 	@FindBy(xpath="//input[@placeholder='Group Code']")
+	@CacheLookup
 	WebElement groupCodeField;
 	
 	public void enterGroupCode(String groupCode) {
@@ -69,6 +75,7 @@ return registrationPageUrl;
 	WebElement groupCodeIsRequiredError;
 	
 	@FindBy(xpath="//input[@placeholder='Password']")
+	@CacheLookup
 	WebElement passwordField;
 	
 	public void enterPassword(String password) {
@@ -85,6 +92,7 @@ return registrationPageUrl;
 	WebElement passwordSouldBe5CharactersError;	
 		
 	@FindBy(xpath="//input[@placeholder='Confirm Password']")
+	@CacheLookup
 	WebElement confirmPasswordField;
 	
 	public void enterConfirmedPassword(String confirmedPassword) {
@@ -104,6 +112,7 @@ return registrationPageUrl;
 	WebElement confirmPasswordSouldBe5CharactersError;
 			
 	@FindBy(xpath="//span[text()='Register Me']/..")
+	@CacheLookup
 	WebElement registerMeButton;
 	
 	public RegistrationConfirmationPage clickRegisterMeButton() {
