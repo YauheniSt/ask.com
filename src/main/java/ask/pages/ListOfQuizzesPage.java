@@ -15,5 +15,8 @@ public class ListOfQuizzesPage extends Base {
 		driver.findElement(By.xpath("//mat-panel-title[contains(text(),'" + nameOfQuiz + "')]")).click();
 
 	}
-
+public String getListOfQuizzesPageURL() {
+	String listOfQuizzesPageURL=driver.getCurrentUrl();
+	return listOfQuizzesPageURL;
+}
 }
