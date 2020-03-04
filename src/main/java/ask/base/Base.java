@@ -49,7 +49,7 @@ public class Base {
 
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		//driver.manage().timeouts().implicitlyWait(Util.implicitWait, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Util.implicitWait, TimeUnit.SECONDS);
 		
 		return driver;
 

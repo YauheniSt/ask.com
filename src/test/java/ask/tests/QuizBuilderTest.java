@@ -2,23 +2,25 @@ package ask.tests;
 
 import java.io.IOException;
 
-import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
 
 import ask.base.Base;
 import ask.pages.ListOfQuizzesPage;
 import ask.pages.LoginPage;
+import ask.pages.QuizBuiderPage;
 import ask.pages.TeacherHomePage;
 
-public class ListOfQuizzesTest extends Base {
-
+public class QuizBuilderTest extends Base {
+	
 	LoginPage loginPage;
 	TeacherHomePage teacherHomePage;
 	ListOfQuizzesPage listOfQuizzes;
-
+	QuizBuiderPage quizBuiderPage;
+	
 	@BeforeMethod
 	public void setUp() throws IOException {
 		browserInit();
@@ -28,24 +30,19 @@ public class ListOfQuizzesTest extends Base {
 		teacherHomePage = new TeacherHomePage();
 		teacherHomePage.clickQuizzesButton();
 		listOfQuizzes=new ListOfQuizzesPage();
-		
-	}
-	@Test
-	public void verifyQuizName() {
-		listOfQuizzes.selectQuizFromList(prop.getProperty("quizName"));
-	}
-	
-	@Test
-	public void verifyQuizBuiderPageUrl() {
 		listOfQuizzes.clickCreateNewQuizButton();
-		Assert.assertEquals(listOfQuizzes.getListOfQuizzesPageURL(), prop.getProperty("quizBuiderPageUrl"));
+		quizBuiderPage=new QuizBuiderPage();
 	}
 	
-	
-
-	@AfterMethod(enabled=true)
-	public void tearDown() {
-		driver.quit();
+	@Test
+	public void createNewQuizTest() throws InterruptedException {
+		quizBuiderPage.entertitleOfQuiz(prop.getProperty("quizName"));
+		quizBuiderPage.clickAddQuestionButton();		
+		quizBuiderPage.selectTextualQuestionType();
+		quizBuiderPage.enterQuestion(prop.getProperty("textualQuestion"));
+		quizBuiderPage.checkShowStopperCheckBox();
+		quizBuiderPage.clickAddQuestionButton();
+		
 	}
 
 }
