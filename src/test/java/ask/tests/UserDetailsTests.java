@@ -27,6 +27,7 @@ public class UserDetailsTests extends Base {
 	@BeforeMethod
 	public void setUp() throws IOException {
 		browserInit();
+		launchApp();
 		loginPage = new LoginPage();		
 		loginPage.login(prop.getProperty("email"), prop.getProperty("password"));
 		teacherHomePage=new TeacherHomePage();
