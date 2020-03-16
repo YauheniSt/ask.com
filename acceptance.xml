@@ -1,9 +1,0 @@
-<suite name="ask.com" parallel="none">
-  <test name="Acceptance">
-    <classes>
-      <class name="ask.tests.ListOfQuizzesTest"/> 
-      <class name="ask.tests.LoginTests"/> 
-           
-    </classes>
-  </test> 
-</suite> 

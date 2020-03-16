@@ -49,12 +49,27 @@ public class TeacherHomePage extends Base {
 		return true;
 	}
 
-	@FindBy(xpath = "//h5[text()='Users Management']")
+	@FindBy(xpath = "//h5[contains(text(),'Management')]/../../..")
 	WebElement usersManagementLink;
 
 	public UsersManagementPage clickUsersManagementLink() {
 		usersManagementLink.click();
 		return new UsersManagementPage();
 	}
-
+	@FindBy(xpath = "//h5[text()='Assignments']/../../..")
+	WebElement assignmentsLink;
+	
+	public AssignQuizPage clickAssignmentsLink() {
+		assignmentsLink.click();
+		return new AssignQuizPage();
+	}
+	@FindBy(xpath="//h5[text()='Submissions']/../../..")
+	WebElement submissionsLink;
+	
+	public SubmissionsPage clickSubmissionsLink() {
+		submissionsLink.click();
+		return new SubmissionsPage();
+	}
+	
+	
 }

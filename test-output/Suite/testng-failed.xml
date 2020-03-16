@@ -3,24 +3,39 @@
 <suite name="Failed suite [Suite]" parallel="none">
   <test name="Test(failed)" parallel="none">
     <classes>
-      <class name="ask.tests.ListOfQuizzesTest">
+      <class name="ask.tests.RegistrationTest">
         <methods>
           <include name="setUp"/>
-          <include name="tearDown"/>
+          <include name="set"/>
         </methods>
-      </class> <!-- ask.tests.ListOfQuizzesTest -->
+      </class> <!-- ask.tests.RegistrationTest -->
+      <class name="ask.tests.QuizBuilderTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- ask.tests.QuizBuilderTest -->
       <class name="ask.tests.LoginTests">
         <methods>
-          <include name="loginAsTeacherTC"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- ask.tests.LoginTests -->
+      <class name="ask.tests.ListOfQuizzesTest">
+        <methods>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- ask.tests.ListOfQuizzesTest -->
       <class name="ask.tests.UserDetailsTests">
         <methods>
           <include name="convertStudentToTeacherTest_658"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- ask.tests.UserDetailsTests -->
+      <class name="ask.tests.TeacherHomePageTest">
+        <methods>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- ask.tests.TeacherHomePageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

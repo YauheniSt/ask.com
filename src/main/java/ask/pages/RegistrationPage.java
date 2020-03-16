@@ -59,6 +59,11 @@ return registrationPageUrl;
 	@FindBy(xpath="//input[@placeholder='Email']/../../following-sibling::div[2]//div//mat-error[text()='Should be a valid email address']")
 	WebElement shouldBeValidEmailError;
 	
+	public boolean getShouldBeValidEmailError() {
+		shouldBeValidEmailError.isDisplayed();
+		return true;
+	}
+	
 	@FindBy(xpath="//input[@placeholder='Email']/../../following-sibling::div[2]//div//mat-error")
 	WebElement emailIsRequiredError;
 		

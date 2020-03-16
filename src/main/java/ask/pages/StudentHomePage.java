@@ -35,7 +35,13 @@ public class StudentHomePage extends Base {
 		String teacherHomePageURL = driver.getCurrentUrl();
    return teacherHomePageURL;
 	}
+@FindBy(xpath="//h5[text()='My Assignments']/../../..")
+WebElement myAssignmentsButton;
 
+public AssessmentPage clickMyAssignmentsButton() {
+	myAssignmentsButton.click();
+	return new AssessmentPage();
+}
 	
 	
 	

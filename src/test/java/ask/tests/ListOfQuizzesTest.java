@@ -43,7 +43,7 @@ public class ListOfQuizzesTest extends Base {
 	
 	
 
-	@AfterMethod(enabled=true)
+	@AfterMethod(enabled=false)
 	public void tearDown() {
 		driver.quit();
 	}

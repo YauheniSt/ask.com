@@ -21,6 +21,23 @@ public class UserDetailsPage extends Base {
 	WebElement STUDENTlabel;
 	@FindBy(xpath = "//td[text()='TEACHER']")
 	WebElement TEACHERlabel;
+	
+	@FindBy(xpath = "//mat-icon[text()='delete']/..")
+	WebElement deleteUserButton;
+	
+	public void clickDeleteUserButton() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click();", deleteUserButton);
+		
+	}
+	@FindBy(xpath = "//span[text()='Delete']/..")
+	WebElement confirmDeleteUserButton;
+	
+	public void clickConfirmDeleteUserButton() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click();", confirmDeleteUserButton);
+
+	}
 
 	public boolean getTEACHERlabel() {
 		TEACHERlabel.isDisplayed();

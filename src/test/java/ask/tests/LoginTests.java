@@ -47,7 +47,7 @@ public class LoginTests extends Base {
 		try {
 			// Assert.assertTrue(loginPage.getErrorMessageRequiredField());
 			Assert.assertTrue(loginPage.getAuthenticationFailed());
-		} catch (NoSuchElementException As) {
+		} catch (NoSuchElementException e) {
 			sa.assertEquals(teacherHomePage.getCurrentUrl(), prop.getProperty("techerHomePageURL"),"url is not correct" );
 			Assert.assertTrue(teacherHomePage.getTeacherLabel());
 			

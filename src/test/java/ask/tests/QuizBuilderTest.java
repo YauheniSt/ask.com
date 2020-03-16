@@ -28,7 +28,7 @@ public class QuizBuilderTest extends Base {
 		browserInit();
 		launchApp();
 		loginPage = new LoginPage();
-		loginPage.login("stashaniny@gmail.com", "12345");
+		loginPage.login(prop.getProperty("teacherEmail"), prop.getProperty("teacherPassword"));
 		teacherHomePage = new TeacherHomePage();
 		teacherHomePage.clickQuizzesButton();
 		listOfQuizzes=new ListOfQuizzesPage();
