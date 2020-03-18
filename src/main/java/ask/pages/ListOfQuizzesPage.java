@@ -56,7 +56,9 @@ public void deleteAllQuizzes() throws InterruptedException {
 			
 		WebElement quiz=driver.findElement(By.xpath("//mat-panel-title"));
 		quiz.click();
+		Thread.sleep(1000);
 		driver.findElement(By.xpath("//span[text()='Delete']/..")).click();
+		Thread.sleep(1000);
 		driver.findElement(By.xpath("//p[text()='Are you sure want to DELETE whole quiz? This action cannot be undone!']/../..//button[2]")).click();}
 		Thread.sleep(1000);
 		}

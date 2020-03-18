@@ -86,6 +86,7 @@ public void createQuiz() throws InterruptedException, IOException {
 		assignQuizPage=new AssignQuizPage();
 		assignQuizPage.clickGroupFilterButton();
 		assignQuizPage.selectGroupFromList(prop.getProperty("group"));
+		Thread.sleep(3000);
 		assignQuizPage.checkStuden(prop.getProperty("group"));
 		assignQuizPage.clickSelectQuizToAssignField();
 		assignQuizPage.selectQuizToAssign(prop.getProperty("quizName"));
@@ -114,6 +115,7 @@ public void createQuiz() throws InterruptedException, IOException {
 			Assert.assertTrue(assessmentPage.getSuccessMessage());
 			Assert.assertTrue(assessmentPage.getSubmissionAcceptedMessage());
 			assessmentPage.clickSubmitSuccessButton();
+			Thread.sleep(2000);
 			Assert.assertEquals(prop.getProperty("myAssignmentUrl"), myAssignmentsPage.getMyAssignmentsPageUrl());
 			
 		}

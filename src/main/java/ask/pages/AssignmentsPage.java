@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -57,12 +58,31 @@ public class AssignmentsPage extends Base {
 				+ "')]/..//span[contains(text(),'Pending Submission')]")).isDisplayed();
 		return true;
 	}
-	public void deleteAllAssignments() {
+	
+	public void deleteAllAssignments() throws InterruptedException {
 	List <WebElement> dots=	driver.findElements(By.xpath("//mat-panel-title[contains(text(),'Assignment Date')]/..//mat-icon"));
 	int numberOfAssignments=dots.size();
 	for (int i=0; i<numberOfAssignments; i++) {
+		try {
 		dots.get(i).click();
-		driver.findElement(By.xpath("//span[text()='Delete Assignment']")).click();
+		
+		WebElement delete=driver.findElement(By.xpath("//span[text()='Delete Assignment']"));
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("arguments[0].click();", delete);
+		driver.findElement(By.xpath("//span[text()='Delete']")).click();
+		Thread.sleep(3000);
+		}
+		catch (StaleElementReferenceException e) {
+		WebElement dot=	driver.findElement(By.xpath("//mat-panel-title[contains(text(),'Assignment Date')]/..//mat-icon"));		
+		dot.click();
+		WebElement delete=driver.findElement(By.xpath("//span[text()='Delete Assignment']"));
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("arguments[0].click();", delete);		
+		driver.findElement(By.xpath("//span[text()='Delete']")).click();
+		Thread.sleep(3000);
+		}
+		
+		
 	}
 	
 	

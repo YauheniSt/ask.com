@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="ask.tests.UsersManagementTests">
+      <class name="ask.tests.ListOfQuizzesTest">
         <methods>
           <include name="setUp"/>
-          <include name="deleteUser"/>
+          <include name="verifyAllQuizzesCanBeDeleted"/>
         </methods>
-      </class> <!-- ask.tests.UsersManagementTests -->
+      </class> <!-- ask.tests.ListOfQuizzesTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

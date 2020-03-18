@@ -1,83 +1,139 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="1" failed="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="7" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="45572" started-at="2020-03-18T03:41:48Z" finished-at="2020-03-18T03:42:33Z">
+  <suite name="Suite" duration-ms="209109" started-at="2020-03-18T04:51:03Z" finished-at="2020-03-18T04:54:32Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="45572" started-at="2020-03-18T03:41:48Z" finished-at="2020-03-18T03:42:33Z">
-      <class name="ask.tests.UsersManagementTests">
-        <test-method status="FAIL" signature="setUp()[pri:0, instance:ask.tests.UsersManagementTests@2d209079]" name="setUp" is-config="true" duration-ms="0" started-at="2020-03-17T22:41:48Z" finished-at="2020-03-17T22:41:48Z">
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[chrome not reachable
-  (Session info: chrome=80.0.3987.132)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'LAPTOP-69PVCUGI', ip: '10.0.0.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.132, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\stash\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62741}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: d863bb9c16319cf0b96045740e45a351]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=80.0.3987.132)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'LAPTOP-69PVCUGI', ip: '10.0.0.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.132, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\stash\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62741}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: d863bb9c16319cf0b96045740e45a351
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions.deleteAllCookies(RemoteWebDriver.java:694)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringOptions.deleteAllCookies(EventFiringWebDriver.java:630)
-	at ask.base.Base.browserInit(Base.java:51)
-	at ask.tests.UsersManagementTests.setUp(UsersManagementTests.java:22)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:653)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:207)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:178)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+    <test name="Test" duration-ms="209109" started-at="2020-03-18T04:51:03Z" finished-at="2020-03-18T04:54:32Z">
+      <class name="ask.tests.AssessmentTest">
+        <test-method status="PASS" signature="createQuiz()[pri:0, instance:ask.tests.AssessmentTest@39ba5a14]" name="createQuiz" is-config="true" duration-ms="37826" started-at="2020-03-17T23:53:33Z" finished-at="2020-03-17T23:54:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createQuiz -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:ask.tests.AssessmentTest@39ba5a14]" name="setUp" is-config="true" duration-ms="14333" started-at="2020-03-17T23:54:11Z" finished-at="2020-03-17T23:54:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="SKIP" signature="deleteUser()[pri:0, instance:ask.tests.UsersManagementTests@2d209079]" name="deleteUser" duration-ms="3" started-at="2020-03-17T22:42:33Z" finished-at="2020-03-17T22:42:33Z">
+        <test-method status="PASS" signature="completeAssignment1()[pri:0, instance:ask.tests.AssessmentTest@39ba5a14]" name="completeAssignment1" duration-ms="6180" started-at="2020-03-17T23:54:25Z" finished-at="2020-03-17T23:54:32Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- deleteUser -->
-      </class> <!-- ask.tests.UsersManagementTests -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- completeAssignment1 -->
+      </class> <!-- ask.tests.AssessmentTest -->
+      <class name="ask.tests.LoginTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:ask.tests.LoginTest@7c30a502]" name="setUp" is-config="true" duration-ms="14441" started-at="2020-03-17T23:51:03Z" finished-at="2020-03-17T23:51:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="loginAsStudentTC()[pri:0, instance:ask.tests.LoginTest@7c30a502]" name="loginAsStudentTC" duration-ms="5962" started-at="2020-03-17T23:51:17Z" finished-at="2020-03-17T23:51:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginAsStudentTC -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:ask.tests.LoginTest@7c30a502]" name="tearDown" is-config="true" duration-ms="934" started-at="2020-03-17T23:51:23Z" finished-at="2020-03-17T23:51:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:ask.tests.LoginTest@7c30a502]" name="setUp" is-config="true" duration-ms="12861" started-at="2020-03-17T23:51:25Z" finished-at="2020-03-17T23:51:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="loginAsTeacherTC(java.lang.String, java.lang.String)[pri:0, instance:ask.tests.LoginTest@7c30a502]" name="loginAsTeacherTC" duration-ms="1277" started-at="2020-03-17T23:51:38Z" data-provider="getLoginData" finished-at="2020-03-17T23:51:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[stashaniny@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[12345.0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginAsTeacherTC -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:ask.tests.LoginTest@7c30a502]" name="tearDown" is-config="true" duration-ms="879" started-at="2020-03-17T23:51:39Z" finished-at="2020-03-17T23:51:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:ask.tests.LoginTest@7c30a502]" name="setUp" is-config="true" duration-ms="13184" started-at="2020-03-17T23:51:40Z" finished-at="2020-03-17T23:51:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="loginAsTeacherTC(java.lang.String, java.lang.String)[pri:0, instance:ask.tests.LoginTest@7c30a502]" name="loginAsTeacherTC" duration-ms="1323" started-at="2020-03-17T23:51:53Z" data-provider="getLoginData" finished-at="2020-03-17T23:51:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[stashanin@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[12345.0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginAsTeacherTC -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:ask.tests.LoginTest@7c30a502]" name="tearDown" is-config="true" duration-ms="1294" started-at="2020-03-17T23:51:54Z" finished-at="2020-03-17T23:51:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:ask.tests.LoginTest@7c30a502]" name="setUp" is-config="true" duration-ms="12931" started-at="2020-03-17T23:51:56Z" finished-at="2020-03-17T23:52:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="loginAsTeacherTC(java.lang.String, java.lang.String)[pri:0, instance:ask.tests.LoginTest@7c30a502]" name="loginAsTeacherTC" duration-ms="1315" started-at="2020-03-17T23:52:09Z" data-provider="getLoginData" finished-at="2020-03-17T23:52:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[stashaniny@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123456.0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginAsTeacherTC -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:ask.tests.LoginTest@7c30a502]" name="tearDown" is-config="true" duration-ms="994" started-at="2020-03-17T23:52:10Z" finished-at="2020-03-17T23:52:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- ask.tests.LoginTest -->
+      <class name="ask.tests.QuizBuilderTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:ask.tests.QuizBuilderTest@7f63425a]" name="setUp" is-config="true" duration-ms="15453" started-at="2020-03-17T23:52:11Z" finished-at="2020-03-17T23:52:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="createNewQuizTest()[pri:0, instance:ask.tests.QuizBuilderTest@7f63425a]" name="createNewQuizTest" duration-ms="16381" started-at="2020-03-17T23:52:26Z" finished-at="2020-03-17T23:52:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNewQuizTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:ask.tests.QuizBuilderTest@7f63425a]" name="tearDown" is-config="true" duration-ms="924" started-at="2020-03-17T23:52:43Z" finished-at="2020-03-17T23:52:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- ask.tests.QuizBuilderTest -->
+      <class name="ask.tests.AssignQuizTest">
+        <test-method status="PASS" signature="createQuiz()[pri:0, instance:ask.tests.AssignQuizTest@36d64342]" name="createQuiz" is-config="true" duration-ms="30008" started-at="2020-03-17T23:52:44Z" finished-at="2020-03-17T23:53:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createQuiz -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:ask.tests.AssignQuizTest@36d64342]" name="setUp" is-config="true" duration-ms="14722" started-at="2020-03-17T23:53:14Z" finished-at="2020-03-17T23:53:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="assignQuizTC()[pri:0, instance:ask.tests.AssignQuizTest@36d64342]" name="assignQuizTC" duration-ms="4792" started-at="2020-03-17T23:53:28Z" finished-at="2020-03-17T23:53:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- assignQuizTC -->
+      </class> <!-- ask.tests.AssignQuizTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
