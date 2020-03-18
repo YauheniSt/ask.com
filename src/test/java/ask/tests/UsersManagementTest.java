@@ -12,7 +12,7 @@ import ask.pages.TeacherHomePage;
 import ask.pages.UserDetailsPage;
 import ask.pages.UsersManagementPage;
 
-public class UsersManagementTests extends Base {
+public class UsersManagementTest extends Base {
 	LoginPage loginPage;
 	TeacherHomePage teacherHomePage;
 	UsersManagementPage usersManagementPage;

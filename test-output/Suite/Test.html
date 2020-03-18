@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>7/1/1</td>
+<td>Tests passed/Failed/Skipped:</td><td>4/0/1</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Mar 05 09:57:19 CST 2020</td>
+<td>Started on:</td><td>Tue Mar 17 19:09:08 CDT 2020</td>
 </tr>
-<tr><td>Total time:</td><td>171 seconds (171369 ms)</td>
+<tr><td>Total time:</td><td>66 seconds (66598 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,70 +75,14 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='ask.tests.UserDetailsTests.setUp()'><b>setUp</b><br>Test class: ask.tests.UserDetailsTests</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h6[text()=&apos;Group: 1&apos;]//preceding-sibling::h4[text()=&apos;Ivan Ivanov&apos;]&quot;}
-  (Session info: chrome=80.0.3987.122)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;LAPTOP-69PVCUGI&apos;, ip: &apos;10.0.0.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_211&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\stash\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58964}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: b47dc7b7d38e4100c3fd4db31291c122
-*** Element info: {Using=xpath, value=//h6[text()=&apos;Group: 1&apos;]//preceding-sibling::h4[text()=&apos;Ivan Ivanov&apos;]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:105)
-	at com.sun.proxy.$Proxy7.findElement(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:194)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy11.click(Unknown Source)
-	at ask.pages.UsersManagementPage.selectIvanIvanovGroup1(UsersManagementPage.java:18)
-	at ask.tests.UserDetailsTests.setUp(UserDetailsTests.java:37)
-... Removed 34 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1644236636", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1644236636'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h6[text()=&apos;Group: 1&apos;]//preceding-sibling::h4[text()=&apos;Ivan Ivanov&apos;]&quot;}
-  (Session info: chrome=80.0.3987.122)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;LAPTOP-69PVCUGI&apos;, ip: &apos;10.0.0.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_211&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\stash\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58964}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: b47dc7b7d38e4100c3fd4db31291c122
-*** Element info: {Using=xpath, value=//h6[text()=&apos;Group: 1&apos;]//preceding-sibling::h4[text()=&apos;Ivan Ivanov&apos;]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:105)
-	at com.sun.proxy.$Proxy7.findElement(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:194)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy11.click(Unknown Source)
-	at ask.pages.UsersManagementPage.selectIvanIvanovGroup1(UsersManagementPage.java:18)
-	at ask.tests.UserDetailsTests.setUp(UserDetailsTests.java:37)
+<td title='ask.tests.AssignQuizTest.createQuiz()'><b>createQuiz</b><br>Test class: ask.tests.AssignQuizTest</td>
+<td><div><pre>java.lang.NullPointerException
+	at ask.tests.QuizBuilderTest.createNewQuizTest(QuizBuilderTest.java:42)
+	at ask.tests.AssignQuizTest.createQuiz(AssignQuizTest.java:29)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1788380050", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1788380050'><pre>java.lang.NullPointerException
+	at ask.tests.QuizBuilderTest.createNewQuizTest(QuizBuilderTest.java:42)
+	at ask.tests.AssignQuizTest.createQuiz(AssignQuizTest.java:29)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -146,11 +90,9 @@ Session ID: b47dc7b7d38e4100c3fd4db31291c122
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
 	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
 	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:653)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:175)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:107)
 	at org.testng.TestRunner.privateRun(TestRunner.java:767)
 	at org.testng.TestRunner.run(TestRunner.java:617)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
@@ -167,112 +109,20 @@ Session ID: b47dc7b7d38e4100c3fd4db31291c122
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:178)
 </pre></div></td>
 <td>0</td>
-<td>ask.tests.UserDetailsTests@39ba5a14</td></tr>
+<td>ask.tests.AssignQuizTest@880ec60</td></tr>
 </table><p>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='ask.tests.RegistrationTest.setUp()'><b>setUp</b><br>Test class: ask.tests.RegistrationTest</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[text()=&apos;Confirm email address&apos;] (tried for 10 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at ask.tests.RegistrationTest.setUp(RegistrationTest.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[text()=&apos;Confirm email address&apos;]&quot;}
-  (Session info: chrome=80.0.3987.122)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;LAPTOP-69PVCUGI&apos;, ip: &apos;10.0.0.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_211&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\stash\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:59386}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 41af01b947223830b4cdae35cdbbd736
-*** Element info: {Using=xpath, value=//a[text()=&apos;Confirm email address&apos;]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:105)
-	at com.sun.proxy.$Proxy7.findElement(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:194)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 25 more
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2062667107", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2062667107'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[text()=&apos;Confirm email address&apos;] (tried for 10 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at ask.tests.RegistrationTest.setUp(RegistrationTest.java:77)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:207)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:178)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[text()=&apos;Confirm email address&apos;]&quot;}
-  (Session info: chrome=80.0.3987.122)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;LAPTOP-69PVCUGI&apos;, ip: &apos;10.0.0.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_211&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\stash\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:59386}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 41af01b947223830b4cdae35cdbbd736
-*** Element info: {Using=xpath, value=//a[text()=&apos;Confirm email address&apos;]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:105)
-	at com.sun.proxy.$Proxy7.findElement(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:194)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 25 more
-</pre></div></td>
-<td>43</td>
-<td>ask.tests.RegistrationTest@880ec60</td></tr>
+<td title='ask.tests.AssignQuizTest.setUp()'><b>setUp</b><br>Test class: ask.tests.AssignQuizTest</td>
+<td></td>
+<td>0</td>
+<td>ask.tests.AssignQuizTest@880ec60</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -282,40 +132,25 @@ Session ID: 41af01b947223830b4cdae35cdbbd736
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='ask.tests.QuizBuilderTest.createNewQuizTest()'><b>createNewQuizTest</b><br>Test class: ask.tests.QuizBuilderTest</td>
+<td title='ask.tests.LoginTests.loginAsStudentTC()'><b>loginAsStudentTC</b><br>Test class: ask.tests.LoginTests</td>
 <td></td>
-<td>11</td>
-<td>ask.tests.QuizBuilderTest@3f3afe78</td></tr>
+<td>5</td>
+<td>ask.tests.LoginTests@48140564</td></tr>
 <tr>
 <td title='ask.tests.LoginTests.loginAsTeacherTC()'><b>loginAsTeacherTC</b><br>Test class: ask.tests.LoginTests<br>Parameters: stashaniny@gmail.com, 12345.0</td>
 <td></td>
 <td>1</td>
-<td>ask.tests.LoginTests@7f63425a</td></tr>
+<td>ask.tests.LoginTests@48140564</td></tr>
 <tr>
 <td title='ask.tests.LoginTests.loginAsTeacherTC()'><b>loginAsTeacherTC</b><br>Test class: ask.tests.LoginTests<br>Parameters: stashanin@gmail.com, 12345.0</td>
 <td></td>
 <td>1</td>
-<td>ask.tests.LoginTests@7f63425a</td></tr>
+<td>ask.tests.LoginTests@48140564</td></tr>
 <tr>
 <td title='ask.tests.LoginTests.loginAsTeacherTC()'><b>loginAsTeacherTC</b><br>Test class: ask.tests.LoginTests<br>Parameters: stashaniny@gmail.com, 123456.0</td>
 <td></td>
 <td>1</td>
-<td>ask.tests.LoginTests@7f63425a</td></tr>
-<tr>
-<td title='ask.tests.TeacherHomePageTest.verifyListOfQuizzesPageUrl()'><b>verifyListOfQuizzesPageUrl</b><br>Test class: ask.tests.TeacherHomePageTest</td>
-<td></td>
-<td>3</td>
-<td>ask.tests.TeacherHomePageTest@511baa65</td></tr>
-<tr>
-<td title='ask.tests.ListOfQuizzesTest.verifyQuizBuiderPageUrl()'><b>verifyQuizBuiderPageUrl</b><br>Test class: ask.tests.ListOfQuizzesTest</td>
-<td></td>
-<td>1</td>
-<td>ask.tests.ListOfQuizzesTest@36d64342</td></tr>
-<tr>
-<td title='ask.tests.ListOfQuizzesTest.verifyQuizName()'><b>verifyQuizName</b><br>Test class: ask.tests.ListOfQuizzesTest</td>
-<td></td>
-<td>1</td>
-<td>ask.tests.ListOfQuizzesTest@36d64342</td></tr>
+<td>ask.tests.LoginTests@48140564</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -325,10 +160,10 @@ Session ID: 41af01b947223830b4cdae35cdbbd736
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='ask.tests.UserDetailsTests.convertStudentToTeacherTest_658()'><b>convertStudentToTeacherTest_658</b><br>Test class: ask.tests.UserDetailsTests</td>
+<td title='ask.tests.AssignQuizTest.assignQuizTC()'><b>assignQuizTC</b><br>Test class: ask.tests.AssignQuizTest</td>
 <td></td>
 <td>0</td>
-<td>ask.tests.UserDetailsTests@39ba5a14</td></tr>
+<td>ask.tests.AssignQuizTest@880ec60</td></tr>
 </table><p>
 </body>
 </html>

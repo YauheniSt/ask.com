@@ -18,7 +18,7 @@ import ask.pages.TeacherHomePage;
 import ask.pages.UserDetailsPage;
 import ask.pages.UsersManagementPage;
 
-public class UserDetailsTests extends Base {
+public class UserDetailsTest extends Base {
 	LoginPage loginPage;
 	TeacherHomePage teacherHomePage;
 	UsersManagementPage usersManagementPage;

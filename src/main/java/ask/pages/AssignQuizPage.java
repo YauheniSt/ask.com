@@ -27,12 +27,16 @@ public class AssignQuizPage extends Base {
 		
 	}
 	public void selectGroupFromList(String group) {
-		driver.findElement(By.xpath("//span[text()='All']/../..//mat-option//span[text()='"+group+"']")).click();	
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("arguments[0].click();", driver.findElement(By.xpath("//span[text()='All']/../..//mat-option//span[text()='"+group+"']")));
+		//driver.findElement(By.xpath("//span[text()='All']/../..//mat-option//span[text()='"+group+"']")).click();	
 
 	}
 	
 	public void checkStuden(String group) {
-		driver.findElement(By.xpath("//span[contains(text(),'"+group+"')]/..//preceding-sibling::mat-pseudo-checkbox")).click();	
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("arguments[0].click();", driver.findElement(By.xpath("//span[contains(text(),'"+group+"')]/..//preceding-sibling::mat-pseudo-checkbox")));
+		//driver.findElement(By.xpath("//span[contains(text(),'"+group+"')]/..//preceding-sibling::mat-pseudo-checkbox")).click();	
 
 	}
 	@FindBy(xpath="//span[contains(text(),'Select Quiz To Assign')]/..")

@@ -24,7 +24,7 @@ public class ListOfQuizzesTest extends Base {
 		browserInit();
 		launchApp();
 		loginPage = new LoginPage();
-		loginPage.login("stashaniny@gmail.com", "12345");
+		loginPage.login(prop.getProperty("teacherEmail"), prop.getProperty("teacherPassword"));
 		teacherHomePage = new TeacherHomePage();
 		teacherHomePage.clickQuizzesButton();
 		listOfQuizzes=new ListOfQuizzesPage();
@@ -40,7 +40,11 @@ public class ListOfQuizzesTest extends Base {
 		listOfQuizzes.clickCreateNewQuizButton();
 		Assert.assertEquals(listOfQuizzes.getListOfQuizzesPageURL(), prop.getProperty("quizBuiderPageUrl"));
 	}
-	
+	 @Test
+	 public void verifyAllQuizzesCanBeDeleted() throws InterruptedException {
+		 teacherHomePage.clickQuizzesButton();
+		 listOfQuizzes.deleteAllQuizzes();
+	 }
 	
 
 	@AfterMethod(enabled=false)

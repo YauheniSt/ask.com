@@ -1,5 +1,9 @@
 package ask.pages;
 
+
+
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -52,5 +56,18 @@ public class AssignmentsPage extends Base {
 		driver.findElement(By.xpath("//td[contains(text(),'" + studentFirstName + " " + studentLastName
 				+ "')]/..//span[contains(text(),'Pending Submission')]")).isDisplayed();
 		return true;
+	}
+	public void deleteAllAssignments() {
+	List <WebElement> dots=	driver.findElements(By.xpath("//mat-panel-title[contains(text(),'Assignment Date')]/..//mat-icon"));
+	int numberOfAssignments=dots.size();
+	for (int i=0; i<numberOfAssignments; i++) {
+		dots.get(i).click();
+		driver.findElement(By.xpath("//span[text()='Delete Assignment']")).click();
+	}
+	
+	
+	
+	
+	
 	}
 }

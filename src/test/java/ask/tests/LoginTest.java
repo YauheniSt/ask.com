@@ -11,13 +11,15 @@ import org.testng.asserts.SoftAssert;
 
 import ask.base.Base;
 import ask.pages.LoginPage;
+import ask.pages.StudentHomePage;
 import ask.pages.TeacherHomePage;
 import ask.util.Util;
 
-public class LoginTests extends Base {
+public class LoginTest extends Base {
 
 	LoginPage loginPage;
 	TeacherHomePage teacherHomePage;
+	StudentHomePage studentHomePage;
     SoftAssert sa;
     Util util;
     String sheetName="LoginData";
@@ -28,6 +30,7 @@ public class LoginTests extends Base {
 		launchApp();
 		loginPage = new LoginPage();
 		teacherHomePage = new TeacherHomePage();
+		studentHomePage=new StudentHomePage();
 		sa=new SoftAssert();
 		util=new Util();
 
@@ -35,11 +38,27 @@ public class LoginTests extends Base {
     @DataProvider
     public Object[][] getLoginData() {
     Object data[][]=util.getTestData(sheetName);
-    return data;
-    	
-    	
+    return data;	    	
     }
 
+    @Test
+	public void loginAsStudentTC() {
+
+		loginPage.login(prop.getProperty("studentEmail"), prop.getProperty("studentPassword"));
+		try {
+			// Assert.assertTrue(loginPage.getErrorMessageRequiredField());
+			Assert.assertTrue(loginPage.getAuthenticationFailed());
+		} catch (NoSuchElementException e) {
+			sa.assertEquals(studentHomePage.getCurrentUrl(), prop.getProperty("studentHomePageURL"),"url is not correct" );
+			Assert.assertTrue(studentHomePage.getStudentLabel());
+			
+			
+		}
+		sa.assertAll();
+	}
+
+	
+    
 	@Test(dataProvider = "getLoginData")
 	public void loginAsTeacherTC(String email, String password) {
 
@@ -73,7 +92,7 @@ public class LoginTests extends Base {
 		return data;
 	}*/
 
-	@AfterMethod(enabled=false)
+	@AfterMethod(enabled=true)
 	public void tearDown() {
 		driver.quit();
 	}

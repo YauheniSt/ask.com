@@ -35,8 +35,8 @@ public class RegistrationTest extends Base {
 
 	@Test
 	public void setUp() throws IOException, InterruptedException {
-		for(int i=0; i<10; i++)
-		{	
+		
+		
 		browserInit();
 		
 		driver.get("https://generator.email/inbox1/");
@@ -142,7 +142,7 @@ public class RegistrationTest extends Base {
 			
 		}
 	}
-	}
+	
 	
 	
 	
