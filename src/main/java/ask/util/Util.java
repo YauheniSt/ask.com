@@ -22,6 +22,11 @@ import ask.base.Base;
 
 public class Util extends Base {
 	
+	
+	public void quiteBrowser() {
+		driver.quit();
+	}
+	
 	public static int implicitWait = 5;
 	public static void refreshBrowser() {
 		driver.navigate().refresh();

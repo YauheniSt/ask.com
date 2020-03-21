@@ -24,37 +24,54 @@ public class UserDetailsTest extends Base {
 	UsersManagementPage usersManagementPage;
 	UserDetailsPage userDetailsPage;
 	SoftAssert softAssert;
-	
+
 	@BeforeMethod
 	public void setUp() throws IOException {
 		browserInit();
 		launchApp();
-		loginPage = new LoginPage();		
-		loginPage.login(prop.getProperty("email"), prop.getProperty("password"));
-		teacherHomePage=new TeacherHomePage();
+		loginPage = new LoginPage();
+		loginPage.login(prop.getProperty("teacherEmail"), prop.getProperty("teacherPassword"));
+		teacherHomePage = new TeacherHomePage();
 		teacherHomePage.clickUsersManagementLink();
-		usersManagementPage=new UsersManagementPage();
-		usersManagementPage.selectIvanIvanovGroup1();
-		userDetailsPage=new UserDetailsPage();
-		softAssert=new SoftAssert();
+		usersManagementPage = new UsersManagementPage();
+
+		usersManagementPage.selectStudent(prop.getProperty("group"), prop.getProperty("studentFirstName"),
+				prop.getProperty("studentLastName"));
+		userDetailsPage = new UserDetailsPage();
+		softAssert = new SoftAssert();
 	}
+
 	@Test
 	public void convertStudentToTeacherTest_658() throws InterruptedException {
-		
+
 		userDetailsPage.clickOptionsButton();
 		userDetailsPage.clickChangeUsersRoleButton();
-		userDetailsPage.clickSubmitChangeUsersRoleButton();	
-		//Thread.sleep(3000);
-		//driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-		//softAssert.assertTrue(userDetailsPage.getTEACHERlabel(), "Teacher is not present");
-		//softAssert.assertAll();
+		userDetailsPage.clickSubmitChangeUsersRoleButton();
+		// Thread.sleep(3000);
+		// driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+		// softAssert.assertTrue(userDetailsPage.getTEACHERlabel(), "Teacher is not
+		// present");
+		// softAssert.assertAll();
 		Assert.assertTrue(userDetailsPage.getTEACHERlabel());
 		teacherHomePage.clickLogOutButton();
 		teacherHomePage.clickConfirmLogOutButton();
+
+	}
+
+	@Test
+	public void verifyStudentCanBeDeleted() throws InterruptedException {
+
+		userDetailsPage.deleteStudent();
+		teacherHomePage.clickLogOutButton();
+		Thread.sleep(2000);
+		teacherHomePage.clickConfirmLogOutButton();
+		loginPage.login(prop.getProperty("studentEmail"), prop.getProperty("studentPassword"));
+		Assert.assertTrue(loginPage.getAuthenticationFailed());
 		
 		
 	}
-	@AfterMethod(enabled=false)
+
+	@AfterMethod(enabled = true)
 	public void tearDown() {
 		driver.quit();
 	}

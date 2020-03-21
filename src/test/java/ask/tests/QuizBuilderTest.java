@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -15,6 +16,7 @@ import ask.pages.ListOfQuizzesPage;
 import ask.pages.LoginPage;
 import ask.pages.QuizBuiderPage;
 import ask.pages.TeacherHomePage;
+import ask.util.Util;
 
 public class QuizBuilderTest extends Base {
 	
@@ -22,8 +24,9 @@ public class QuizBuilderTest extends Base {
 	TeacherHomePage teacherHomePage;
 	ListOfQuizzesPage listOfQuizzes;
 	QuizBuiderPage quizBuiderPage;
+	Util util;
 	
-	@BeforeMethod
+	@BeforeMethod(alwaysRun=true)
 	public void setUp() throws IOException {
 		browserInit();
 		launchApp();
@@ -36,7 +39,7 @@ public class QuizBuilderTest extends Base {
 		quizBuiderPage=new QuizBuiderPage();
 	}
 	
-	@Test
+	@Test(groups= {"Acceptance"})
 	public void createNewQuizTest() throws InterruptedException {
 		
 		quizBuiderPage.entertitleOfQuiz(prop.getProperty("quizName"));
@@ -80,9 +83,22 @@ public class QuizBuilderTest extends Base {
     
 	@AfterMethod
 	public void tearDown() {
-		driver.quit();
+		util=new Util();
+	    util.quiteBrowser();
 	}
-	
+	@AfterClass
+	public void deleteQuizzes() throws IOException, InterruptedException {
+		browserInit();
+		launchApp();
+		loginPage = new LoginPage();
+		loginPage.login(prop.getProperty("teacherEmail"), prop.getProperty("teacherPassword"));
+		teacherHomePage = new TeacherHomePage();
+		teacherHomePage.clickQuizzesButton();
+		listOfQuizzes=new ListOfQuizzesPage();
+		listOfQuizzes.deleteAllQuizzes();
+		util=new Util();
+	    util.quiteBrowser();
+	}
 	
 	
 }

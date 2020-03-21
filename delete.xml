@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="none">
+  <test name="Test">
+  <groups>
+  <run>
+  
+  <include name="Delete"/>
+  
+  </run>
+  
+  </groups>
+  
+    <classes>
+      <class name="ask.tests.ListOfQuizzesTest"/>
+      <class name="ask.tests.AssessmentTest"/>
+      <class name="ask.tests.UsersManagementTest"/>
+      <class name="ask.tests.AssignmentsTest"/>
+      <class name="ask.tests.LoginTest"/>
+      <class name="ask.tests.UserDetailsTest"/>
+      <class name="ask.tests.AssignQuizTest"/>
+      <class name="ask.tests.RegistrationTest"/>
+      <class name="ask.tests.QuizBuilderTest"/>
+      <class name="ask.tests.TeacherHomePageTest"/>
+    </classes>
+  </test> 
+</suite> 

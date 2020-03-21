@@ -3,6 +3,8 @@ package ask.tests;
 import java.io.IOException;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -14,6 +16,7 @@ import ask.pages.ListOfQuizzesPage;
 import ask.pages.LoginPage;
 import ask.pages.QuizBuiderPage;
 import ask.pages.TeacherHomePage;
+import ask.util.Util;
 
 public class AssignQuizTest extends Base {	
 	
@@ -24,8 +27,10 @@ public class AssignQuizTest extends Base {
 	TeacherHomePage teacherHomePage;
 	ListOfQuizzesPage listOfQuizzes;
 	QuizBuiderPage quizBuiderPage;
+	Util util;
+	
 
-	@BeforeClass
+	@BeforeClass(alwaysRun=true)
 public void createQuiz() throws InterruptedException, IOException {
 		browserInit();
 		launchApp();
@@ -70,8 +75,10 @@ public void createQuiz() throws InterruptedException, IOException {
 		quizBuiderPage.checkCorrectOptionMultipleChoiseQuestionType(prop.getProperty("multipleChoisQuestion"), 6);
 		quizBuiderPage.checkCorrectOptionMultipleChoiseQuestionType(prop.getProperty("multipleChoisQuestion"), 7);
 		quizBuiderPage.clickSaveButton();
+	    util=new Util();
+	    util.quiteBrowser();
 }
-	@BeforeMethod
+	@BeforeMethod(alwaysRun=true)
 	public void setUp() throws IOException {
 		browserInit();
 		launchApp();
@@ -84,7 +91,7 @@ public void createQuiz() throws InterruptedException, IOException {
 		assignQuizPage=new AssignQuizPage();
 	}
 
-	@Test
+	@Test(groups= {"Acceptance"})
 	public void assignQuizTC() throws InterruptedException {
 		
 		
@@ -101,5 +108,27 @@ public void createQuiz() throws InterruptedException, IOException {
 		Assert.assertTrue(assignmentsPage.verifyStudentName(prop.getProperty("studentFirstName"), prop.getProperty("studentLastName")));
 		Assert.assertTrue(assignmentsPage.getPendingSubmission(prop.getProperty("studentFirstName"), prop.getProperty("studentLastName")));
 		
+	}
+	@AfterClass
+	public void deleteQuizzesAndAssignments() throws IOException, InterruptedException {
+		browserInit();
+		launchApp();
+		loginPage = new LoginPage();
+		loginPage.login(prop.getProperty("teacherEmail"), prop.getProperty("teacherPassword"));
+		teacherHomePage = new TeacherHomePage();
+		teacherHomePage.clickQuizzesButton();
+		ListOfQuizzesPage listOfQuizzes=new ListOfQuizzesPage();
+		listOfQuizzes=new ListOfQuizzesPage();
+		listOfQuizzes.deleteAllQuizzes();
+		teacherHomePage.clickAssignmentsLink();
+		assignmentsPage=new AssignmentsPage();
+		assignmentsPage.deleteAllAssignments();
+		util=new Util();
+	    util.quiteBrowser();
+	}
+	@AfterMethod(alwaysRun=true)
+	public void tearDown() {
+		util=new Util();
+	    util.quiteBrowser();
 	}
 }

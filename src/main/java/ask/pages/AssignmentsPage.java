@@ -69,16 +69,26 @@ public class AssignmentsPage extends Base {
 		WebElement delete=driver.findElement(By.xpath("//span[text()='Delete Assignment']"));
 		JavascriptExecutor js=(JavascriptExecutor)driver;
 		js.executeScript("arguments[0].click();", delete);
-		driver.findElement(By.xpath("//span[text()='Delete']")).click();
+		
+		
+		JavascriptExecutor js1=(JavascriptExecutor)driver;
+		js1.executeScript("arguments[0].click();", driver.findElement(By.xpath("//span[text()='Delete']")));
+		
 		Thread.sleep(3000);
 		}
 		catch (StaleElementReferenceException e) {
 		WebElement dot=	driver.findElement(By.xpath("//mat-panel-title[contains(text(),'Assignment Date')]/..//mat-icon"));		
-		dot.click();
-		WebElement delete=driver.findElement(By.xpath("//span[text()='Delete Assignment']"));
 		JavascriptExecutor js=(JavascriptExecutor)driver;
-		js.executeScript("arguments[0].click();", delete);		
-		driver.findElement(By.xpath("//span[text()='Delete']")).click();
+		js.executeScript("arguments[0].click();", dot);
+		WebElement delete=driver.findElement(By.xpath("//span[text()='Delete Assignment']"));
+		JavascriptExecutor js2=(JavascriptExecutor)driver;
+		js2.executeScript("arguments[0].click();", delete);	
+		
+		
+		WebElement confirmDelete=driver.findElement(By.xpath("//span[text()='Delete']"));
+		JavascriptExecutor js3=(JavascriptExecutor)driver;
+		js3.executeScript("arguments[0].click();", confirmDelete);
+		
 		Thread.sleep(3000);
 		}
 		

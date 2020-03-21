@@ -66,7 +66,8 @@ public class TeacherHomePage extends Base {
 	@FindBy(xpath="//h5[text()='Submissions']/../../..")
 	WebElement submissionsLink;
 	
-	public SubmissionsPage clickSubmissionsLink() {
+	public SubmissionsPage clickSubmissionsLink() throws InterruptedException {
+		Thread.sleep(2000);
 		submissionsLink.click();
 		return new SubmissionsPage();
 	}

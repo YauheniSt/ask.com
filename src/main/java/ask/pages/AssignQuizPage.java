@@ -46,7 +46,9 @@ public class AssignQuizPage extends Base {
 		selectQuizToAssignField.click();
 	}	
 	public void selectQuizToAssign(String quiz) {
-		driver.findElement(By.xpath("//span[contains(text(),'"+quiz+"')]")).click();
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("arguments[0].click();", driver.findElement(By.xpath("//span[contains(text(),'"+quiz+"')]")));
+		
 	}
 	@FindBy(xpath="//span[text()='Give Assignment']/..")
 	WebElement giveAssignmentButton;

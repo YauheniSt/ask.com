@@ -1,139 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="7" passed="7">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="209109" started-at="2020-03-18T04:51:03Z" finished-at="2020-03-18T04:54:32Z">
+  <suite name="Default suite" duration-ms="18581" started-at="2020-03-21T02:47:10Z" finished-at="2020-03-21T02:47:29Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="209109" started-at="2020-03-18T04:51:03Z" finished-at="2020-03-18T04:54:32Z">
-      <class name="ask.tests.AssessmentTest">
-        <test-method status="PASS" signature="createQuiz()[pri:0, instance:ask.tests.AssessmentTest@39ba5a14]" name="createQuiz" is-config="true" duration-ms="37826" started-at="2020-03-17T23:53:33Z" finished-at="2020-03-17T23:54:11Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createQuiz -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:ask.tests.AssessmentTest@39ba5a14]" name="setUp" is-config="true" duration-ms="14333" started-at="2020-03-17T23:54:11Z" finished-at="2020-03-17T23:54:25Z">
+    <test name="Default test" duration-ms="18581" started-at="2020-03-21T02:47:10Z" finished-at="2020-03-21T02:47:29Z">
+      <class name="ask.tests.UserDetailsTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:ask.tests.UserDetailsTest@2d209079]" name="setUp" is-config="true" duration-ms="13990" started-at="2020-03-20T21:47:10Z" finished-at="2020-03-20T21:47:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="completeAssignment1()[pri:0, instance:ask.tests.AssessmentTest@39ba5a14]" name="completeAssignment1" duration-ms="6180" started-at="2020-03-17T23:54:25Z" finished-at="2020-03-17T23:54:32Z">
+        <test-method status="PASS" signature="verifyStudentCanBeDeleted()[pri:0, instance:ask.tests.UserDetailsTest@2d209079]" name="verifyStudentCanBeDeleted" duration-ms="3883" started-at="2020-03-20T21:47:24Z" finished-at="2020-03-20T21:47:28Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- completeAssignment1 -->
-      </class> <!-- ask.tests.AssessmentTest -->
-      <class name="ask.tests.LoginTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:ask.tests.LoginTest@7c30a502]" name="setUp" is-config="true" duration-ms="14441" started-at="2020-03-17T23:51:03Z" finished-at="2020-03-17T23:51:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginAsStudentTC()[pri:0, instance:ask.tests.LoginTest@7c30a502]" name="loginAsStudentTC" duration-ms="5962" started-at="2020-03-17T23:51:17Z" finished-at="2020-03-17T23:51:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginAsStudentTC -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:ask.tests.LoginTest@7c30a502]" name="tearDown" is-config="true" duration-ms="934" started-at="2020-03-17T23:51:23Z" finished-at="2020-03-17T23:51:24Z">
+        </test-method> <!-- verifyStudentCanBeDeleted -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:ask.tests.UserDetailsTest@2d209079]" name="tearDown" is-config="true" duration-ms="707" started-at="2020-03-20T21:47:28Z" finished-at="2020-03-20T21:47:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:ask.tests.LoginTest@7c30a502]" name="setUp" is-config="true" duration-ms="12861" started-at="2020-03-17T23:51:25Z" finished-at="2020-03-17T23:51:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginAsTeacherTC(java.lang.String, java.lang.String)[pri:0, instance:ask.tests.LoginTest@7c30a502]" name="loginAsTeacherTC" duration-ms="1277" started-at="2020-03-17T23:51:38Z" data-provider="getLoginData" finished-at="2020-03-17T23:51:39Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[stashaniny@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[12345.0]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginAsTeacherTC -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:ask.tests.LoginTest@7c30a502]" name="tearDown" is-config="true" duration-ms="879" started-at="2020-03-17T23:51:39Z" finished-at="2020-03-17T23:51:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:ask.tests.LoginTest@7c30a502]" name="setUp" is-config="true" duration-ms="13184" started-at="2020-03-17T23:51:40Z" finished-at="2020-03-17T23:51:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginAsTeacherTC(java.lang.String, java.lang.String)[pri:0, instance:ask.tests.LoginTest@7c30a502]" name="loginAsTeacherTC" duration-ms="1323" started-at="2020-03-17T23:51:53Z" data-provider="getLoginData" finished-at="2020-03-17T23:51:54Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[stashanin@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[12345.0]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginAsTeacherTC -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:ask.tests.LoginTest@7c30a502]" name="tearDown" is-config="true" duration-ms="1294" started-at="2020-03-17T23:51:54Z" finished-at="2020-03-17T23:51:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:ask.tests.LoginTest@7c30a502]" name="setUp" is-config="true" duration-ms="12931" started-at="2020-03-17T23:51:56Z" finished-at="2020-03-17T23:52:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginAsTeacherTC(java.lang.String, java.lang.String)[pri:0, instance:ask.tests.LoginTest@7c30a502]" name="loginAsTeacherTC" duration-ms="1315" started-at="2020-03-17T23:52:09Z" data-provider="getLoginData" finished-at="2020-03-17T23:52:10Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[stashaniny@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[123456.0]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginAsTeacherTC -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:ask.tests.LoginTest@7c30a502]" name="tearDown" is-config="true" duration-ms="994" started-at="2020-03-17T23:52:10Z" finished-at="2020-03-17T23:52:11Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- ask.tests.LoginTest -->
-      <class name="ask.tests.QuizBuilderTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:ask.tests.QuizBuilderTest@7f63425a]" name="setUp" is-config="true" duration-ms="15453" started-at="2020-03-17T23:52:11Z" finished-at="2020-03-17T23:52:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="createNewQuizTest()[pri:0, instance:ask.tests.QuizBuilderTest@7f63425a]" name="createNewQuizTest" duration-ms="16381" started-at="2020-03-17T23:52:26Z" finished-at="2020-03-17T23:52:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createNewQuizTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:ask.tests.QuizBuilderTest@7f63425a]" name="tearDown" is-config="true" duration-ms="924" started-at="2020-03-17T23:52:43Z" finished-at="2020-03-17T23:52:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- ask.tests.QuizBuilderTest -->
-      <class name="ask.tests.AssignQuizTest">
-        <test-method status="PASS" signature="createQuiz()[pri:0, instance:ask.tests.AssignQuizTest@36d64342]" name="createQuiz" is-config="true" duration-ms="30008" started-at="2020-03-17T23:52:44Z" finished-at="2020-03-17T23:53:14Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createQuiz -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:ask.tests.AssignQuizTest@36d64342]" name="setUp" is-config="true" duration-ms="14722" started-at="2020-03-17T23:53:14Z" finished-at="2020-03-17T23:53:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="assignQuizTC()[pri:0, instance:ask.tests.AssignQuizTest@36d64342]" name="assignQuizTC" duration-ms="4792" started-at="2020-03-17T23:53:28Z" finished-at="2020-03-17T23:53:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- assignQuizTC -->
-      </class> <!-- ask.tests.AssignQuizTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- ask.tests.UserDetailsTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

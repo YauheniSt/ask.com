@@ -2,32 +2,26 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" parallel="none">
   <test name="Test(failed)" parallel="none">
+    <groups>
+      <run>
+        <include name="Delete"/>
+      </run>
+    </groups>
     <classes>
-      <class name="ask.tests.LoginTest">
-        <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- ask.tests.LoginTest -->
-      <class name="ask.tests.QuizBuilderTest">
+      <class name="ask.tests.AssignmentsTest">
         <methods>
           <include name="tearDown"/>
           <include name="setUp"/>
+          <include name="deleteAllAssignments"/>
         </methods>
-      </class> <!-- ask.tests.QuizBuilderTest -->
-      <class name="ask.tests.AssignQuizTest">
+      </class> <!-- ask.tests.AssignmentsTest -->
+      <class name="ask.tests.ListOfQuizzesTest">
         <methods>
-          <include name="createQuiz"/>
           <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="verifyAllQuizzesCanBeDeleted"/>
         </methods>
-      </class> <!-- ask.tests.AssignQuizTest -->
-      <class name="ask.tests.AssessmentTest">
-        <methods>
-          <include name="createQuiz"/>
-          <include name="completeAssignment1"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- ask.tests.AssessmentTest -->
+      </class> <!-- ask.tests.ListOfQuizzesTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

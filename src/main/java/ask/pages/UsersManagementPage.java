@@ -1,9 +1,10 @@
 package ask.pages;
 
-import java.util.List;
+
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -20,46 +21,22 @@ public class UsersManagementPage extends Base {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = "//h6[text()='Group: 1']//preceding-sibling::h4[text()='Ivan Ivanov']")
-	WebElement IvanIvanovGroup1;
-
-	public void selectIvanIvanovGroup1() {
-		IvanIvanovGroup1.click();
+	public boolean getStudent(String group, String studentFirstName, String studentLastName) {
+		WebElement student = driver.findElement(By.xpath("//h6[text()='Group: " + group + "']//preceding-sibling::h4[text()='"
+				+ studentFirstName + " " + studentLastName + "']"));		
+			student.isDisplayed();		
+		return true;
 	}
-
-	public void deleteStudents() throws InterruptedException {
-		UserDetailsPage userDetailsPage = new UserDetailsPage();
-		List<WebElement> students = driver.findElements(By.xpath("//h6[contains(text(),'Group:')]"));
-		int numberOfStudents = students.size();
-		System.out.println(numberOfStudents);
-		for (int i = 0; i < numberOfStudents; i++) {
-			try {
-				
-				students.get(i).click();
-				Thread.sleep(1000);
-				userDetailsPage.clickOptionsButton();
-				Thread.sleep(1000);
-				userDetailsPage.clickDeleteUserButton();
-				Thread.sleep(1000);
-				userDetailsPage.clickConfirmDeleteUserButton();
-				Thread.sleep(5000);
-			} catch (StaleElementReferenceException e) {
-				WebElement student=driver.findElement(By.xpath("//h6[contains(text(),'Group:')]"));
-				
-				student.click();
-
-				userDetailsPage.clickOptionsButton();
-
-				userDetailsPage.clickDeleteUserButton();
-
-				userDetailsPage.clickConfirmDeleteUserButton();
-				Thread.sleep(5000);
-			}
-
-		}
 	
+	
+
+	public void selectStudent(String group, String studentFirstName, String studentLastName) {
+		WebElement student = driver.findElement(By.xpath("//h6[text()='Group: " + group + "']//preceding-sibling::h4[text()='"
+				+ studentFirstName + " " + studentLastName + "']"));
+		student.click();
+	}
 
 	
 
 	}
-}
+

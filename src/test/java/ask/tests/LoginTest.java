@@ -24,7 +24,7 @@ public class LoginTest extends Base {
     Util util;
     String sheetName="LoginData";
 	
-    @BeforeMethod
+    @BeforeMethod(alwaysRun=true)
 	public void setUp() throws IOException {
 		browserInit();
 		launchApp();
@@ -41,7 +41,7 @@ public class LoginTest extends Base {
     return data;	    	
     }
 
-    @Test
+    @Test(groups= {"Acceptance"})
 	public void loginAsStudentTC() {
 
 		loginPage.login(prop.getProperty("studentEmail"), prop.getProperty("studentPassword"));

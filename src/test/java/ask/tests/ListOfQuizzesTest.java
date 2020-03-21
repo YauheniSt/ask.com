@@ -19,7 +19,7 @@ public class ListOfQuizzesTest extends Base {
 	TeacherHomePage teacherHomePage;
 	ListOfQuizzesPage listOfQuizzes;
 
-	@BeforeMethod
+	@BeforeMethod(alwaysRun=true)
 	public void setUp() throws IOException {
 		browserInit();
 		launchApp();
@@ -40,14 +40,14 @@ public class ListOfQuizzesTest extends Base {
 		listOfQuizzes.clickCreateNewQuizButton();
 		Assert.assertEquals(listOfQuizzes.getListOfQuizzesPageURL(), prop.getProperty("quizBuiderPageUrl"));
 	}
-	 @Test
+	 @Test(groups= {"Delete"})
 	 public void verifyAllQuizzesCanBeDeleted() throws InterruptedException {
 		 teacherHomePage.clickQuizzesButton();
 		 listOfQuizzes.deleteAllQuizzes();
 	 }
 	
 
-	@AfterMethod(enabled=false)
+	@AfterMethod(alwaysRun=true)
 	public void tearDown() {
 		driver.quit();
 	}
