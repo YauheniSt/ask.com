@@ -35,11 +35,7 @@ public class LoginTest extends Base {
 		util=new Util();
 
 	}
-    @DataProvider
-    public Object[][] getLoginData() {
-    Object data[][]=util.getTestData(sheetName);
-    return data;	    	
-    }
+    
 
     @Test(groups= {"Acceptance"})
 	public void loginAsStudentTC() {
@@ -57,7 +53,11 @@ public class LoginTest extends Base {
 		sa.assertAll();
 	}
 
-	
+    @DataProvider
+    public Object[][] getLoginData() {
+    Object data[][]=Util.getTestData(sheetName);
+    return data;	    	
+    }
     
 	@Test(dataProvider = "getLoginData")
 	public void loginAsTeacherTC(String email, String password) {

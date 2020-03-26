@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" parallel="none">
+  <listeners>
+    <listener class-name="ask.util.Listener"/>
+  </listeners>
   <test name="Test(failed)" parallel="none">
     <groups>
       <run>
-        <include name="Delete"/>
+        <include name="Acceptance"/>
       </run>
     </groups>
     <classes>
-      <class name="ask.tests.AssignmentsTest">
+      <class name="ask.tests.MyGradesTest">
         <methods>
-          <include name="tearDown"/>
+          <include name="verifyStudentCanCheckGrades"/>
           <include name="setUp"/>
-          <include name="deleteAllAssignments"/>
         </methods>
-      </class> <!-- ask.tests.AssignmentsTest -->
-      <class name="ask.tests.ListOfQuizzesTest">
+      </class> <!-- ask.tests.MyGradesTest -->
+      <class name="ask.tests.StudentHomePageTest">
         <methods>
+          <include name="verifyStudentCanCheckGrades"/>
           <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="verifyAllQuizzesCanBeDeleted"/>
+          <include name="verifyStudentCanCheckGrades1"/>
         </methods>
-      </class> <!-- ask.tests.ListOfQuizzesTest -->
+      </class> <!-- ask.tests.StudentHomePageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

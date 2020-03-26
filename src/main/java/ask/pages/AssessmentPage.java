@@ -40,7 +40,8 @@ public class AssessmentPage extends Base {
 	}
 
 	public boolean getSubmissionAcceptedMessage() {
-		driver.findElement(By.xpath("//p[text()='Your submission has been accepted. You might track your results on \"My Grades\" page.']"))
+		driver.findElement(By.xpath(
+				"//p[text()='Your submission has been accepted. You might track your results on \"My Grades\" page.']"))
 				.isDisplayed();
 		return true;
 	}

@@ -54,13 +54,13 @@ public  class WebEventListener extends Base implements WebDriverEventListener {
 		System.out.println("Navigated forward to next page");
 	}
 
-	public void onException1(Throwable error, WebDriver driver) {
-		System.out.println("Exception occured: " + error);
-		try {
+	public void onException(Throwable error, WebDriver driver) {
+		System.out.println("!!!!!!!!!!!!!!!!!!Exception occured: " + error);
+	/*	try {
 			Util.takeScreenshotAtEndOfTest();
 		} catch (IOException e) {
 			e.printStackTrace();
-		}
+		}*/
 	}
 
 	public void beforeFindBy(By by, WebElement element, WebDriver driver) {
@@ -150,9 +150,5 @@ public  class WebEventListener extends Base implements WebDriverEventListener {
 		
 	}
 
-	public void onException(Throwable throwable, WebDriver driver) {
-		// TODO Auto-generated method stub
-		
-	}
-
+	
 }

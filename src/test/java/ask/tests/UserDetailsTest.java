@@ -41,7 +41,7 @@ public class UserDetailsTest extends Base {
 		softAssert = new SoftAssert();
 	}
 
-	@Test
+	@Test(dependsOnMethods= {"verifyStudentCanBeDeleted"})
 	public void convertStudentToTeacherTest_658() throws InterruptedException {
 
 		userDetailsPage.clickOptionsButton();
@@ -55,6 +55,9 @@ public class UserDetailsTest extends Base {
 		Assert.assertTrue(userDetailsPage.getTEACHERlabel());
 		teacherHomePage.clickLogOutButton();
 		teacherHomePage.clickConfirmLogOutButton();
+		loginPage.login(prop.getProperty("studentEmail"), prop.getProperty("studentPassword"));
+		Assert.assertTrue(teacherHomePage.getTeacherLabel());
+		
 
 	}
 
