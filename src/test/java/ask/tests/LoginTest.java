@@ -59,7 +59,7 @@ public class LoginTest extends Base {
     return data;	    	
     }
     
-	@Test(dataProvider = "getLoginData")
+	@Test(dataProvider = "getLoginData", groups= {"Regression"})
 	public void loginAsTeacherTC(String email, String password) {
 
 		loginPage.login(email, password);
@@ -92,7 +92,7 @@ public class LoginTest extends Base {
 		return data;
 	}*/
 
-	@AfterMethod(enabled=true)
+	@AfterMethod(enabled=false)
 	public void tearDown() {
 		driver.quit();
 	}
