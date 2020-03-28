@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="ask.tests.GradeTest">
+      <class name="ask.tests.MyGradesTest">
         <methods>
+          <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="submitAssignment"/>
-          <include name="verifyStudentCanBeGraded"/>
+          <include name="verifyStudentCanCheckGradeDetails"/>
         </methods>
-      </class> <!-- ask.tests.GradeTest -->
+      </class> <!-- ask.tests.MyGradesTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
