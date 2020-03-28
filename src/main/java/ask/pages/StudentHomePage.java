@@ -21,12 +21,16 @@ public class StudentHomePage extends Base {
 
 	@FindBy(xpath = "//span[text()='Log Out']//parent::button")
 	WebElement confirmLogOutButton;
-
-	public void clickConfirmLogOutButton() {
-		confirmLogOutButton.click();
+	
+	public void clickLogOutButton() {
+		JavascriptExecutor js= (JavascriptExecutor) driver; 
+		js.executeAsyncScript("arguments[0].click();", logOutButton);
+		
 	}
 
-	public void clickLogOutButton() {
+	
+
+	public void clickConfirmLogOutButton() {
 		JavascriptExecutor js= (JavascriptExecutor) driver; 
 		js.executeAsyncScript("arguments[0].click();", confirmLogOutButton);
 		
