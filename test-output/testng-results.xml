@@ -1,76 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="39303" started-at="2020-03-28T20:13:17Z" finished-at="2020-03-28T20:13:56Z">
+  <suite name="Default suite" duration-ms="57256" started-at="2020-03-28T20:40:13Z" finished-at="2020-03-28T20:41:11Z">
     <groups>
-      <group name="Regression">
-        <method signature="LoginTest.loginAsTeacherTC(java.lang.String, java.lang.String)[pri:0, instance:ask.tests.LoginTest@7c30a502]" name="loginAsTeacherTC" class="ask.tests.LoginTest"/>
-      </group> <!-- Regression -->
+      <group name="Acceptance">
+        <method signature="GradeTest.verifyStudentCanBeGraded()[pri:0, instance:ask.tests.GradeTest@2752f6e2]" name="verifyStudentCanBeGraded" class="ask.tests.GradeTest"/>
+      </group> <!-- Acceptance -->
     </groups>
-    <test name="Default test" duration-ms="39303" started-at="2020-03-28T20:13:17Z" finished-at="2020-03-28T20:13:56Z">
-      <class name="ask.tests.LoginTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:ask.tests.LoginTest@7c30a502]" name="setUp" is-config="true" duration-ms="12231" started-at="2020-03-28T15:13:18Z" finished-at="2020-03-28T15:13:30Z">
+    <test name="Default test" duration-ms="57256" started-at="2020-03-28T20:40:13Z" finished-at="2020-03-28T20:41:11Z">
+      <class name="ask.tests.GradeTest">
+        <test-method status="PASS" signature="submitAssignment()[pri:0, instance:ask.tests.GradeTest@2752f6e2]" name="submitAssignment" is-config="true" duration-ms="36956" started-at="2020-03-28T15:40:13Z" finished-at="2020-03-28T15:40:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submitAssignment -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:ask.tests.GradeTest@2752f6e2]" name="setUp" is-config="true" duration-ms="15001" started-at="2020-03-28T15:40:50Z" finished-at="2020-03-28T15:41:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginAsTeacherTC(java.lang.String, java.lang.String)[pri:0, instance:ask.tests.LoginTest@7c30a502]" name="loginAsTeacherTC" duration-ms="1297" started-at="2020-03-28T15:13:30Z" data-provider="getLoginData" finished-at="2020-03-28T15:13:31Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[fanwer.warteni.1y@macbookrepairvancouver.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[12345.0]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="verifyStudentCanBeGraded()[pri:0, instance:ask.tests.GradeTest@2752f6e2]" name="verifyStudentCanBeGraded" duration-ms="5283" started-at="2020-03-28T15:41:05Z" finished-at="2020-03-28T15:41:11Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginAsTeacherTC -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:ask.tests.LoginTest@7c30a502]" name="setUp" is-config="true" duration-ms="11476" started-at="2020-03-28T15:13:31Z" finished-at="2020-03-28T15:13:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginAsTeacherTC(java.lang.String, java.lang.String)[pri:0, instance:ask.tests.LoginTest@7c30a502]" name="loginAsTeacherTC" duration-ms="1021" started-at="2020-03-28T15:13:43Z" data-provider="getLoginData" finished-at="2020-03-28T15:13:44Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[stashanin@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[12345.0]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginAsTeacherTC -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:ask.tests.LoginTest@7c30a502]" name="setUp" is-config="true" duration-ms="11537" started-at="2020-03-28T15:13:44Z" finished-at="2020-03-28T15:13:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginAsTeacherTC(java.lang.String, java.lang.String)[pri:0, instance:ask.tests.LoginTest@7c30a502]" name="loginAsTeacherTC" duration-ms="1160" started-at="2020-03-28T15:13:55Z" data-provider="getLoginData" finished-at="2020-03-28T15:13:56Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[fanwer.warteni.1y@macbookrepairvancouver.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[123456.0]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginAsTeacherTC -->
-      </class> <!-- ask.tests.LoginTest -->
+        </test-method> <!-- verifyStudentCanBeGraded -->
+      </class> <!-- ask.tests.GradeTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

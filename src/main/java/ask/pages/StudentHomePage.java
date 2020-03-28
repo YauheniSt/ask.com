@@ -27,7 +27,9 @@ public class StudentHomePage extends Base {
 	}
 
 	public void clickLogOutButton() {
-		logOutButton.click();
+		JavascriptExecutor js= (JavascriptExecutor) driver; 
+		js.executeAsyncScript("arguments[0].click();", confirmLogOutButton);
+		
 	}
 
 	@FindBy(xpath = "//p[text()='STUDENT']")
