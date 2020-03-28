@@ -20,7 +20,7 @@ public class MyGradesPage extends Base {
 	
 	public void clickDetailsButton(String quizName) {
 		WebElement detailsButton = driver
-				.findElement(By.xpath("//t[text()='"+quizName+"']/..//span[contains(text(),'Details')]/.."));
+				.findElement(By.xpath("//td[text()='"+quizName+"']/..//span[contains(text(),'Details')]/.."));
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();", detailsButton);
 	}

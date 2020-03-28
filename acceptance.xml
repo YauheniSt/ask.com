@@ -4,25 +4,25 @@
 
 <listeners>
 <listener class-name="ask.util.Listener"/>
+<listener class-name="ask.util.ExtentReporterNG"/>
 </listeners>
-
-
 
   <test name="Test">
   <groups>
-  <run>
-  
-  <include name="Acceptance"/>
-  
+  <run>  
+  <include name="Acceptance"/>  
   </run>
   
-  </groups>
-  
-    <classes>
-    
-     <class name="ask.tests.StudentHomePageTest"/>
-     <class name="ask.tests.MyGradesTest"/>
+  </groups>  
+    <classes>  
       
+     <class name="ask.tests.StudentHomePageTest"/>
+     <class name="ask.tests.LoginTest"/>
+     <class name="ask.tests.MyGradesTest"/>
+     <class name="ask.tests.AssessmentTest"/>
+     <class name="ask.tests.SubmissionsTest"/>
+     <class name="ask.tests.GradeTest"/>
+     
     </classes>
   </test> 
 </suite> 

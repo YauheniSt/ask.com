@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="none">
+
+<listeners>
+<listener class-name="ask.util.Listener"/>
+<listener class-name="ask.util.ExtentReporterNG"/>
+</listeners>
+
+  <test name="Test">
+  
+  <groups>
+  <run>  
+  <include name="Regression"/>  
+  </run>
+  </groups>
+  
+    <classes>
+      <class name="ask.tests.StudentHomePageTest"/>
+     <class name="ask.tests.MyGradesTest"/>
+     <class name="ask.tests.LoginTest"/>
+     <class name="ask.tests.QuizBuilderTest"/>
+     <class name="ask.tests.AssessmentTest"/>
+     <class name="ask.tests.AssignmentsTest"/>
+    
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

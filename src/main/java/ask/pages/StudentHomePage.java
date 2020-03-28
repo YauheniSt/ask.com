@@ -60,7 +60,7 @@ public class StudentHomePage extends Base {
 		return new AssessmentPage();
 	}
 
-	@FindBy(xpath = "//h5[text()='My Grade']/../../..")
+	@FindBy(xpath = "//h5[text()='My Grades']/../../..")
 	WebElement myGradesButton;
 
 	public MyGradesPage clickMyGradesButton() {

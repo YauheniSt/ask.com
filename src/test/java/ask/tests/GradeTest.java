@@ -136,16 +136,14 @@ public class GradeTest extends Base {
 		teacherHomePage = new TeacherHomePage();
 		teacherHomePage.clickSubmissionsLink();
 		submissionsPage = new SubmissionsPage();
-		sa = new SoftAssert();
-		submissionsPage = new SubmissionsPage();
+				submissionsPage = new SubmissionsPage();
 		submissionsPage.selectSubmissinFromList(prop.getProperty("group"), prop.getProperty("studentFirstName"),
 				prop.getProperty("studentLastName"), prop.getProperty("quizName"));
 		gradePage = new GradePage();
-		assignmentsPage=new AssignmentsPage();
-		Assert.assertTrue(assignmentsPage.getGradedByTeacherText());
+		
 	}
 
-	@Test
+	@Test(groups= {"Acceptance"})
 	public void verifyStudentCanBeGraded() throws InterruptedException {
 		gradePage.gradeStudent(prop.getProperty("textualQuestion"), prop.getProperty("commentToTextualAnswer"),
 				prop.getProperty("singleChoiseQuestion"), prop.getProperty("commentToSingleChoiseAnswer"),

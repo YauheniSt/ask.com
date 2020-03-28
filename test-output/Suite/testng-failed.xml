@@ -11,17 +11,16 @@
       </run>
     </groups>
     <classes>
-      <class name="ask.tests.MyGradesTest">
+      <class name="ask.tests.LoginTest">
         <methods>
-          <include name="verifyStudentCanCheckGrades"/>
           <include name="setUp"/>
+          <include name="loginAsStudentTC"/>
         </methods>
-      </class> <!-- ask.tests.MyGradesTest -->
+      </class> <!-- ask.tests.LoginTest -->
       <class name="ask.tests.StudentHomePageTest">
         <methods>
           <include name="verifyStudentCanCheckGrades"/>
           <include name="setUp"/>
-          <include name="verifyStudentCanCheckGrades1"/>
         </methods>
       </class> <!-- ask.tests.StudentHomePageTest -->
     </classes>

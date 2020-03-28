@@ -2,6 +2,7 @@ package ask.tests;
 
 import java.io.IOException;
 
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -27,12 +28,16 @@ public class MyGradesTest extends Base {
 		myGradesPage=new MyGradesPage();
 		studentHomePage.clickMyGradesButton();
 			}
-	@Test(groups= {"Acceptance"})
-	public void verifyStudentCanCheckGrades() {
+	@Test(groups= {"Regression"})
+	public void verifyStudentCanCheckGradeDetails() {
 		myGradesPage.clickDetailsButton(prop.getProperty("quizName"));
 	}
 	
-	
+	@AfterMethod(alwaysRun=true)
+	public void tearDown() {
+		driver.quit();
+	}
+
 	
 	
 }

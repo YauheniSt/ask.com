@@ -5,7 +5,6 @@ import java.io.IOException;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-
 import ask.base.Base;
 
 public class Listener extends Base implements ITestListener{
@@ -16,7 +15,7 @@ public class Listener extends Base implements ITestListener{
 	}
 
 	public void onTestSuccess(ITestResult result) {
-		// TODO Auto-generated method stub
+		System.out.println("Test case "+result.getName().toString()+"passed");
 		
 	}
 
@@ -26,7 +25,8 @@ public class Listener extends Base implements ITestListener{
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
+		System.out.println("!!!!!!!!!!!!!!!!!!Test case: "+result.getName().toString()+" failed");
+				System.out.println("                                                         ");
 	}
 
 	public void onTestSkipped(ITestResult result) {

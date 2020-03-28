@@ -41,7 +41,7 @@ public class UserDetailsTest extends Base {
 		softAssert = new SoftAssert();
 	}
 
-	@Test(dependsOnMethods= {"verifyStudentCanBeDeleted"})
+	@Test(enabled=false, dependsOnMethods= {"verifyStudentCanBeDeleted"})
 	public void convertStudentToTeacherTest_658() throws InterruptedException {
 
 		userDetailsPage.clickOptionsButton();
@@ -61,7 +61,7 @@ public class UserDetailsTest extends Base {
 
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void verifyStudentCanBeDeleted() throws InterruptedException {
 
 		userDetailsPage.deleteStudent();

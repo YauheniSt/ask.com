@@ -33,7 +33,7 @@ public class RegistrationTest extends Base {
 
 	}
 
-	@Test
+	@Test(enabled=true)
 	public void setUp() throws IOException, InterruptedException {
 		
 		

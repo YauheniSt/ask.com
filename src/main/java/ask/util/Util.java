@@ -57,11 +57,9 @@ public class Util extends Base {
 	public static void getScreenshot(String result) throws IOException {
 		String dir=System.getProperty("user.dir");
 	File file=	((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-	FileUtils.copyFile(file, new File( dir+"//resourses//" +result +".png"));
-	
+	FileUtils.copyFile(file, new File( dir+"//failers//"+result +".png"));
 		
 	}
-	
 
 	/*
 	 * public static void takeScreenshotAtEndOfTest() throws IOException { File
