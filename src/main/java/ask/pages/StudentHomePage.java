@@ -18,22 +18,29 @@ public class StudentHomePage extends Base {
 
 	@FindBy(xpath = "//h5[text()='Log Out']")
 	WebElement logOutButton;
-
-	@FindBy(xpath = "//span[text()='Log Out']//parent::button")
-	WebElement confirmLogOutButton;
 	
 	public void clickLogOutButton() {
-		JavascriptExecutor js= (JavascriptExecutor) driver; 
-		js.executeAsyncScript("arguments[0].click();", logOutButton);
-		
+		logOutButton.click();
 	}
 
+	@FindBy(xpath = "//span[text()='Log Out']/..")
+	WebElement confirmLogOutButton;
 	
-
 	public void clickConfirmLogOutButton() {
+		confirmLogOutButton.click();
+	}
+	
+	public void logOut() throws InterruptedException {
+		Thread.sleep(2000);
 		JavascriptExecutor js= (JavascriptExecutor) driver; 
-		js.executeAsyncScript("arguments[0].click();", confirmLogOutButton);
-		
+		js.executeAsyncScript("arguments[0].click();", logOutButton);
+		Thread.sleep(2000);
+	//WebDriverWait wait=new WebDriverWait(driver, 3);
+	//wait.until(ExpectedConditions.visibilityOf(confirmLogOutButton));
+	confirmLogOutButton.click();
+	/*JavascriptExecutor js2= (JavascriptExecutor) driver; 
+		js2.executeAsyncScript("arguments[0].click();", confirmLogOutButton);
+		*/
 	}
 
 	@FindBy(xpath = "//p[text()='STUDENT']")
@@ -81,4 +88,6 @@ public class StudentHomePage extends Base {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();", detailsButton);
 	}
+
+	
 }

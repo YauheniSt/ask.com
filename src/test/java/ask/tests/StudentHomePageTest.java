@@ -38,7 +38,14 @@ public class StudentHomePageTest extends Base {
 		studentHomePage.clickMyGradesButton();
 		Assert.assertEquals(myGradesPage.getMyGradesPageUrl(), prop.getProperty("myGradesPageUrl"));
 	}
-	@AfterMethod(alwaysRun=true)
+	@Test
+	public void verifyStudentCanLogOut() throws InterruptedException {
+		studentHomePage.clickLogOutButton();
+		studentHomePage.clickConfirmLogOutButton();
+	}
+	
+	
+	@AfterMethod(alwaysRun=false)
 	public void tearDown() {
 		driver.quit();
 	}
