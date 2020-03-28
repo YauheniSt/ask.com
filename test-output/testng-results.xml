@@ -2,19 +2,19 @@
 <testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="39534" started-at="2020-03-28T19:50:58Z" finished-at="2020-03-28T19:51:37Z">
+  <suite name="Default suite" duration-ms="39303" started-at="2020-03-28T20:13:17Z" finished-at="2020-03-28T20:13:56Z">
     <groups>
       <group name="Regression">
         <method signature="LoginTest.loginAsTeacherTC(java.lang.String, java.lang.String)[pri:0, instance:ask.tests.LoginTest@7c30a502]" name="loginAsTeacherTC" class="ask.tests.LoginTest"/>
       </group> <!-- Regression -->
     </groups>
-    <test name="Default test" duration-ms="39534" started-at="2020-03-28T19:50:58Z" finished-at="2020-03-28T19:51:37Z">
+    <test name="Default test" duration-ms="39303" started-at="2020-03-28T20:13:17Z" finished-at="2020-03-28T20:13:56Z">
       <class name="ask.tests.LoginTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:ask.tests.LoginTest@7c30a502]" name="setUp" is-config="true" duration-ms="12367" started-at="2020-03-28T14:50:58Z" finished-at="2020-03-28T14:51:10Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:ask.tests.LoginTest@7c30a502]" name="setUp" is-config="true" duration-ms="12231" started-at="2020-03-28T15:13:18Z" finished-at="2020-03-28T15:13:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginAsTeacherTC(java.lang.String, java.lang.String)[pri:0, instance:ask.tests.LoginTest@7c30a502]" name="loginAsTeacherTC" duration-ms="1212" started-at="2020-03-28T14:51:10Z" data-provider="getLoginData" finished-at="2020-03-28T14:51:12Z">
+        <test-method status="PASS" signature="loginAsTeacherTC(java.lang.String, java.lang.String)[pri:0, instance:ask.tests.LoginTest@7c30a502]" name="loginAsTeacherTC" duration-ms="1297" started-at="2020-03-28T15:13:30Z" data-provider="getLoginData" finished-at="2020-03-28T15:13:31Z">
           <params>
             <param index="0">
               <value>
@@ -30,11 +30,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginAsTeacherTC -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:ask.tests.LoginTest@7c30a502]" name="setUp" is-config="true" duration-ms="11498" started-at="2020-03-28T14:51:12Z" finished-at="2020-03-28T14:51:23Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:ask.tests.LoginTest@7c30a502]" name="setUp" is-config="true" duration-ms="11476" started-at="2020-03-28T15:13:31Z" finished-at="2020-03-28T15:13:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginAsTeacherTC(java.lang.String, java.lang.String)[pri:0, instance:ask.tests.LoginTest@7c30a502]" name="loginAsTeacherTC" duration-ms="1034" started-at="2020-03-28T14:51:23Z" data-provider="getLoginData" finished-at="2020-03-28T14:51:24Z">
+        <test-method status="PASS" signature="loginAsTeacherTC(java.lang.String, java.lang.String)[pri:0, instance:ask.tests.LoginTest@7c30a502]" name="loginAsTeacherTC" duration-ms="1021" started-at="2020-03-28T15:13:43Z" data-provider="getLoginData" finished-at="2020-03-28T15:13:44Z">
           <params>
             <param index="0">
               <value>
@@ -50,11 +50,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginAsTeacherTC -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:ask.tests.LoginTest@7c30a502]" name="setUp" is-config="true" duration-ms="11689" started-at="2020-03-28T14:51:24Z" finished-at="2020-03-28T14:51:36Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:ask.tests.LoginTest@7c30a502]" name="setUp" is-config="true" duration-ms="11537" started-at="2020-03-28T15:13:44Z" finished-at="2020-03-28T15:13:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginAsTeacherTC(java.lang.String, java.lang.String)[pri:0, instance:ask.tests.LoginTest@7c30a502]" name="loginAsTeacherTC" duration-ms="1167" started-at="2020-03-28T14:51:36Z" data-provider="getLoginData" finished-at="2020-03-28T14:51:37Z">
+        <test-method status="PASS" signature="loginAsTeacherTC(java.lang.String, java.lang.String)[pri:0, instance:ask.tests.LoginTest@7c30a502]" name="loginAsTeacherTC" duration-ms="1160" started-at="2020-03-28T15:13:55Z" data-provider="getLoginData" finished-at="2020-03-28T15:13:56Z">
           <params>
             <param index="0">
               <value>

@@ -78,11 +78,13 @@ public class Util extends Base {
 		wait.until(ExpectedConditions.urlToBe(prop.getProperty("registrationConfirmationPage")));
 	}
 
-	static String TESTDATA_SHEET_PATH = "\\ask.com\\src\\main\\java\\ask\\testData\\askData.xlsx";
+	
 	static Workbook book;
 	static Sheet sheet;
 
 	public static Object[][] getTestData(String sheetName) {
+	String dir=	System.getProperty("user.dir");
+		String TESTDATA_SHEET_PATH = dir+"\\src\\main\\java\\ask\\testData\\askData.xlsx";
 		FileInputStream file = null;
 		try {
 			file = new FileInputStream(TESTDATA_SHEET_PATH);
