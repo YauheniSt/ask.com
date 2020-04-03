@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="18502" started-at="2020-04-03T03:45:48Z" finished-at="2020-04-03T03:46:07Z">
+  <suite name="Default suite" duration-ms="15120" started-at="2020-04-03T16:12:28Z" finished-at="2020-04-03T16:12:43Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="18502" started-at="2020-04-03T03:45:48Z" finished-at="2020-04-03T03:46:07Z">
-      <class name="ask.util.Util">
-        <test-method status="PASS" signature="findBrokenLinks()[pri:0, instance:ask.util.Util@6b71769e]" name="findBrokenLinks" duration-ms="18483" started-at="2020-04-02T22:45:48Z" finished-at="2020-04-02T22:46:07Z">
+    <test name="Default test" duration-ms="15120" started-at="2020-04-03T16:12:28Z" finished-at="2020-04-03T16:12:43Z">
+      <class name="ask.util.SeleniumTest">
+        <test-method status="PASS" signature="findBrokenLinks()[pri:0, instance:ask.util.SeleniumTest@2c8d66b2]" name="findBrokenLinks" duration-ms="15098" started-at="2020-04-03T11:12:28Z" finished-at="2020-04-03T11:12:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- findBrokenLinks -->
-      </class> <!-- ask.util.Util -->
+      </class> <!-- ask.util.SeleniumTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
