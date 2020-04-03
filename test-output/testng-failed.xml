@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="ask.tests.StudentHomePageTest">
+      <class name="ask.util.Util">
         <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="verifyStudentCanLogOut"/>
+          <include name="findBrokenLinks"/>
+          <include name="dragAndDrop"/>
+          <include name="clickAndHold"/>
         </methods>
-      </class> <!-- ask.tests.StudentHomePageTest -->
+      </class> <!-- ask.util.Util -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

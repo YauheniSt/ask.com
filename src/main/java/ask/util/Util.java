@@ -4,7 +4,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
@@ -14,9 +16,13 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 
 import ask.base.Base;
 
@@ -55,17 +61,17 @@ public class Util extends Base {
 	}
 
 	public static void getScreenshot(String result) throws IOException {
-		String dir=System.getProperty("user.dir");
-	File file=	((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-	FileUtils.copyFile(file, new File( dir+"//failers//"+result +".png"));
-		
+		String dir = System.getProperty("user.dir");
+		File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(file, new File(dir + "//failers//" + result + ".png"));
+
 	}
 
 	/*
 	 * public static void takeScreenshotAtEndOfTest() throws IOException { File
 	 * scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE); String
-	 * currentDir = System.getProperty("user.dir"); 
-	 * FileUtils.copyFile(scrFile, new File(currentDir + System.currentTimeMillis() + ".png")); }
+	 * currentDir = System.getProperty("user.dir"); FileUtils.copyFile(scrFile, new
+	 * File(currentDir + System.currentTimeMillis() + ".png")); }
 	 */
 
 	public void waitForRegisterNowButton() {
@@ -78,13 +84,12 @@ public class Util extends Base {
 		wait.until(ExpectedConditions.urlToBe(prop.getProperty("registrationConfirmationPage")));
 	}
 
-	
 	static Workbook book;
 	static Sheet sheet;
 
-	public static Object[][] getTestData(String sheetName) {
-	String dir=	System.getProperty("user.dir");
-		String TESTDATA_SHEET_PATH = dir+"\\src\\main\\java\\ask\\testData\\askData.xlsx";
+	public static Object[][] getTestData(String sheetName) throws InvalidFormatException {
+		String dir = System.getProperty("user.dir");
+		String TESTDATA_SHEET_PATH = dir + "\\src\\main\\java\\ask\\testData\\askData.xlsx";
 		FileInputStream file = null;
 		try {
 			file = new FileInputStream(TESTDATA_SHEET_PATH);
@@ -93,8 +98,6 @@ public class Util extends Base {
 		}
 		try {
 			book = WorkbookFactory.create(file);
-		} catch (InvalidFormatException e) {
-			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -109,4 +112,67 @@ public class Util extends Base {
 		}
 		return data;
 	}
-}
+
+	@Test
+	public void dragAndDrop() throws IOException {
+		browserInit();
+		launchApp();
+		WebElement drag = driver
+				.findElement(By.xpath("//div[@id='products']//div//ul//li[2]//a[contains(text(),'5000')]"));
+		WebElement drop = driver
+				.findElement(By.xpath("//h3[contains(text(),'DEBIT SIDE')]/..//h3[contains(text(),'Amount')]/..//li"));
+
+		Actions actions = new Actions(driver);
+
+		actions.dragAndDrop(drag, drop).build().perform();
+		try {
+			String text = drop.getText();
+			System.out.println(text);
+		} catch (StaleElementReferenceException e) {
+			WebElement drop2 = driver.findElement(
+					By.xpath("//h3[contains(text(),'DEBIT SIDE')]/..//h3[contains(text(),'Amount')]/..//li"));
+			String text2 = drop2.getText();
+			System.out.println(text2);
+		}
+	}
+
+	@Test
+	public void clickAndHold() throws IOException {
+		browserInit();
+		launchApp();
+		WebElement drag = driver
+				.findElement(By.xpath("//div[@id='products']//div//ul//li[2]//a[contains(text(),'5000')]"));
+		WebElement drop = driver
+				.findElement(By.xpath("//h3[contains(text(),'DEBIT SIDE')]/..//h3[contains(text(),'Amount')]/..//li"));
+
+		Actions actions = new Actions(driver);
+		actions.clickAndHold(drag).build().perform();
+		actions.doubleClick(driver.findElement(By.xpath("//strong[text()='Note:']"))).build().perform();
+
+	}
+	@Test
+	public void findBrokenLinks() throws IOException {
+		browserInit();
+		launchApp();
+		List <WebElement>  link=driver.findElements(By.tagName("a"));
+		link.addAll(driver.findElements(By.tagName("img")));
+		int linksNumber=link.size();
+		
+		
+		List<WebElement> activeLinks=new ArrayList<WebElement>();
+		
+		for(int i=0;i<linksNumber;i++)
+		{System.out.println(link.get(i).getAttribute("href"));
+			if(link.get(i).getAttribute("href") != null){
+				activeLinks.add(link.get(i));
+			}
+		}
+		System.out.println(activeLinks.size());
+		
+				}
+		
+		
+		}
+	
+	
+	

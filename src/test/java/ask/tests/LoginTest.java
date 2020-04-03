@@ -1,6 +1,8 @@
 package ask.tests;
 
 import java.io.IOException;
+
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.openqa.selenium.NoSuchElementException;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -54,7 +56,7 @@ public class LoginTest extends Base {
 	}
 
     @DataProvider
-    public Object[][] getLoginData() {
+    public Object[][] getLoginData() throws InvalidFormatException {
     Object data[][]=Util.getTestData(sheetName);
     return data;	    	
     }
