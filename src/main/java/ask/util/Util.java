@@ -66,6 +66,11 @@ public class Util extends Base {
 		FileUtils.copyFile(file, new File(dir + "//failers//" + result + ".png"));
 
 	}
+	
+	public void getScre() throws IOException {
+	File file= 	((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+	FileUtils.copyFile(file, new File("C:"));
+	}
 
 	/*
 	 * public static void takeScreenshotAtEndOfTest() throws IOException { File
