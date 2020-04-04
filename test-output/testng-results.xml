@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="2" passed="1">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="49220" started-at="2020-04-04T18:10:41Z" finished-at="2020-04-04T18:11:30Z">
+  <suite name="Default suite" duration-ms="31970" started-at="2020-04-04T18:47:47Z" finished-at="2020-04-04T18:48:19Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="49220" started-at="2020-04-04T18:10:41Z" finished-at="2020-04-04T18:11:30Z">
-      <class name="ask.util.SeleniumTest">
-        <test-method status="FAIL" signature="findBrokenLinks()[pri:0, instance:ask.util.SeleniumTest@1134affc]" name="findBrokenLinks" duration-ms="24933" started-at="2020-04-04T13:10:41Z" finished-at="2020-04-04T13:11:06Z">
+    <test name="Default test" duration-ms="31970" started-at="2020-04-04T18:47:47Z" finished-at="2020-04-04T18:48:19Z">
+      <class name="selenium.BrokenLinksAndEmages">
+        <test-method status="FAIL" signature="findBrokenLinksPractice()[pri:0, instance:selenium.BrokenLinksAndEmages@2f7c7260]" name="findBrokenLinksPractice" duration-ms="31956" started-at="2020-04-04T13:47:47Z" finished-at="2020-04-04T13:48:19Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-https://freecrm.com/!!!   FAILED  !!!Forbidden, https://freecrm.com/!!!   FAILED  !!!Forbidden, https://register.freecrm.com/register/!!!   FAILED  !!!Forbidden, https://freecrm.com/about.html!!!   FAILED  !!!Forbidden, https://freecrm.com/#!!!   FAILED  !!!Forbidden, https://freecrm.com/crmcloud.html!!!   FAILED  !!!Forbidden, https://freecrm.com/hipaa.html!!!   FAILED  !!!Forbidden, https://freecrm.com/dental.html!!!   FAILED  !!!Forbidden, https://freecrm.com/auto.html!!!   FAILED  !!!Forbidden, https://freecrm.com/callcenter.html!!!   FAILED  !!!Forbidden, https://freecrm.com/insurance.html!!!   FAILED  !!!Forbidden, https://freecrm.com/re.html!!!   FAILED  !!!Forbidden, https://freecrm.com/ps.html!!!   FAILED  !!!Forbidden, https://freecrm.com/cb.html!!!   FAILED  !!!Forbidden, https://freecrm.com/is.html!!!   FAILED  !!!Forbidden, https://freecrm.com/compare.html!!!   FAILED  !!!Forbidden, https://freecrm.com/pricing.html!!!   FAILED  !!!Forbidden, https://ui.freecrm.com/!!!   FAILED  !!!Forbidden, https://register.freecrm.com/register/!!!   FAILED  !!!Forbidden, https://register.freecrm.com/register/!!!   FAILED  !!!Forbidden, https://register.freecrm.com/register/!!!   FAILED  !!!Forbidden, https://register.freecrm.com/register/!!!   FAILED  !!!Forbidden, https://register.freecrm.com/register/!!!   FAILED  !!!Forbidden, https://register.freecrm.com/register/!!!   FAILED  !!!Forbidden, https://freecrm.com/!!!   FAILED  !!!Forbidden, https://freecrm.com/crmcloud.html!!!   FAILED  !!!Forbidden, https://freecrm.com/hipaa.html!!!   FAILED  !!!Forbidden, https://freecrm.com/dental.html!!!   FAILED  !!!Forbidden, https://freecrm.com/hipaa.html!!!   FAILED  !!!Forbidden, https://freecrm.com/auto.html!!!   FAILED  !!!Forbidden, https://freecrm.com/callcenter.html!!!   FAILED  !!!Forbidden, https://freecrm.com/insurance.html!!!   FAILED  !!!Forbidden, https://freecrm.com/re.html!!!   FAILED  !!!Forbidden, https://freecrm.com/ps.html!!!   FAILED  !!!Forbidden, https://freecrm.com/cb.html!!!   FAILED  !!!Forbidden, https://freecrm.com/is.html!!!   FAILED  !!!Forbidden, https://freecrm.com/crmcloud.html!!!   FAILED  !!!Forbidden, https://freecrm.com/crmcloud.html!!!   FAILED  !!!Forbidden, https://freecrm.com/crmcloud.html!!!   FAILED  !!!Forbidden, https://freecrm.com/crmcloud.html!!!   FAILED  !!!Forbidden, https://freecrm.com/crmcloud.html!!!   FAILED  !!!Forbidden, https://freecrm.com/privacy.html!!!   FAILED  !!!Forbidden, https://freecrm.com/terms.html!!!   FAILED  !!!Forbidden, https://freecrm.com/#!!!   FAILED  !!!Forbidden]]>
+https://www.facebook.com/allactivity?privacy_source=activity_log_top_menu !!!failed!!! Not Found]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-https://freecrm.com/!!!   FAILED  !!!Forbidden, https://freecrm.com/!!!   FAILED  !!!Forbidden, https://register.freecrm.com/register/!!!   FAILED  !!!Forbidden, https://freecrm.com/about.html!!!   FAILED  !!!Forbidden, https://freecrm.com/#!!!   FAILED  !!!Forbidden, https://freecrm.com/crmcloud.html!!!   FAILED  !!!Forbidden, https://freecrm.com/hipaa.html!!!   FAILED  !!!Forbidden, https://freecrm.com/dental.html!!!   FAILED  !!!Forbidden, https://freecrm.com/auto.html!!!   FAILED  !!!Forbidden, https://freecrm.com/callcenter.html!!!   FAILED  !!!Forbidden, https://freecrm.com/insurance.html!!!   FAILED  !!!Forbidden, https://freecrm.com/re.html!!!   FAILED  !!!Forbidden, https://freecrm.com/ps.html!!!   FAILED  !!!Forbidden, https://freecrm.com/cb.html!!!   FAILED  !!!Forbidden, https://freecrm.com/is.html!!!   FAILED  !!!Forbidden, https://freecrm.com/compare.html!!!   FAILED  !!!Forbidden, https://freecrm.com/pricing.html!!!   FAILED  !!!Forbidden, https://ui.freecrm.com/!!!   FAILED  !!!Forbidden, https://register.freecrm.com/register/!!!   FAILED  !!!Forbidden, https://register.freecrm.com/register/!!!   FAILED  !!!Forbidden, https://register.freecrm.com/register/!!!   FAILED  !!!Forbidden, https://register.freecrm.com/register/!!!   FAILED  !!!Forbidden, https://register.freecrm.com/register/!!!   FAILED  !!!Forbidden, https://register.freecrm.com/register/!!!   FAILED  !!!Forbidden, https://freecrm.com/!!!   FAILED  !!!Forbidden, https://freecrm.com/crmcloud.html!!!   FAILED  !!!Forbidden, https://freecrm.com/hipaa.html!!!   FAILED  !!!Forbidden, https://freecrm.com/dental.html!!!   FAILED  !!!Forbidden, https://freecrm.com/hipaa.html!!!   FAILED  !!!Forbidden, https://freecrm.com/auto.html!!!   FAILED  !!!Forbidden, https://freecrm.com/callcenter.html!!!   FAILED  !!!Forbidden, https://freecrm.com/insurance.html!!!   FAILED  !!!Forbidden, https://freecrm.com/re.html!!!   FAILED  !!!Forbidden, https://freecrm.com/ps.html!!!   FAILED  !!!Forbidden, https://freecrm.com/cb.html!!!   FAILED  !!!Forbidden, https://freecrm.com/is.html!!!   FAILED  !!!Forbidden, https://freecrm.com/crmcloud.html!!!   FAILED  !!!Forbidden, https://freecrm.com/crmcloud.html!!!   FAILED  !!!Forbidden, https://freecrm.com/crmcloud.html!!!   FAILED  !!!Forbidden, https://freecrm.com/crmcloud.html!!!   FAILED  !!!Forbidden, https://freecrm.com/crmcloud.html!!!   FAILED  !!!Forbidden, https://freecrm.com/privacy.html!!!   FAILED  !!!Forbidden, https://freecrm.com/terms.html!!!   FAILED  !!!Forbidden, https://freecrm.com/#!!!   FAILED  !!!Forbidden
+https://www.facebook.com/allactivity?privacy_source=activity_log_top_menu !!!failed!!! Not Found
 	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:37)
-	at ask.util.SeleniumTest.findBrokenLinks(SeleniumTest.java:89)
+	at selenium.BrokenLinksAndEmages.findBrokenLinksPractice(BrokenLinksAndEmages.java:90)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -47,12 +47,8 @@ https://freecrm.com/!!!   FAILED  !!!Forbidden, https://freecrm.com/!!!   FAILED
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- findBrokenLinks -->
-        <test-method status="PASS" signature="findBrokenLinks1()[pri:0, instance:ask.util.SeleniumTest@1134affc]" name="findBrokenLinks1" duration-ms="24265" started-at="2020-04-04T13:11:06Z" finished-at="2020-04-04T13:11:30Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- findBrokenLinks1 -->
-      </class> <!-- ask.util.SeleniumTest -->
+        </test-method> <!-- findBrokenLinksPractice -->
+      </class> <!-- selenium.BrokenLinksAndEmages -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

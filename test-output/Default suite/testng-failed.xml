@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="ask.util.SeleniumTest">
+      <class name="selenium.BrokenLinksAndEmages">
         <methods>
-          <include name="findBrokenLinks"/>
+          <include name="findBrokenLinksPractice"/>
         </methods>
-      </class> <!-- ask.util.SeleniumTest -->
+      </class> <!-- selenium.BrokenLinksAndEmages -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
