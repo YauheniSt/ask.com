@@ -1,54 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="31970" started-at="2020-04-04T18:47:47Z" finished-at="2020-04-04T18:48:19Z">
+  <suite name="Default suite" duration-ms="14487" started-at="2020-04-06T21:10:03Z" finished-at="2020-04-06T21:10:17Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="31970" started-at="2020-04-04T18:47:47Z" finished-at="2020-04-04T18:48:19Z">
-      <class name="selenium.BrokenLinksAndEmages">
-        <test-method status="FAIL" signature="findBrokenLinksPractice()[pri:0, instance:selenium.BrokenLinksAndEmages@2f7c7260]" name="findBrokenLinksPractice" duration-ms="31956" started-at="2020-04-04T13:47:47Z" finished-at="2020-04-04T13:48:19Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[The following asserts failed:
-https://www.facebook.com/allactivity?privacy_source=activity_log_top_menu !!!failed!!! Not Found]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-https://www.facebook.com/allactivity?privacy_source=activity_log_top_menu !!!failed!!! Not Found
-	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:37)
-	at selenium.BrokenLinksAndEmages.findBrokenLinksPractice(BrokenLinksAndEmages.java:90)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:207)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:178)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+    <test name="Default test" duration-ms="14487" started-at="2020-04-06T21:10:03Z" finished-at="2020-04-06T21:10:17Z">
+      <class name="selenium.Xlsx_Creater">
+        <test-method status="PASS" signature="printEmail()[pri:0, instance:selenium.Xlsx_Creater@2c8d66b2]" name="printEmail" duration-ms="14464" started-at="2020-04-06T16:10:03Z" finished-at="2020-04-06T16:10:17Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- findBrokenLinksPractice -->
-      </class> <!-- selenium.BrokenLinksAndEmages -->
+        </test-method> <!-- printEmail -->
+      </class> <!-- selenium.Xlsx_Creater -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

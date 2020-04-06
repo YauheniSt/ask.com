@@ -52,7 +52,7 @@ public class BrokenLinksAndEmages extends Base {
 	}
 
 	@Test
-	public void findBrokenLinksPractice() throws IOException {
+	public void findBrokenLinksExplanation() throws IOException {
 		browserInit();
 		launchApp();
 		// find all links on the page
@@ -88,5 +88,7 @@ public class BrokenLinksAndEmages extends Base {
 		}
 		//assertAll to get all the failed activeUrls
 		sa.assertAll();
+		driver.quit();
 	}
+		
 }

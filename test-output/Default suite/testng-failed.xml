@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="selenium.BrokenLinksAndEmages">
+      <class name="selenium.Xlsx_Creater">
         <methods>
-          <include name="findBrokenLinksPractice"/>
+          <include name="printEmail"/>
         </methods>
-      </class> <!-- selenium.BrokenLinksAndEmages -->
+      </class> <!-- selenium.Xlsx_Creater -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

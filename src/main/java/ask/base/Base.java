@@ -59,7 +59,7 @@ public class Base {
 		//driver.get("http://www.zlti.com");
 		//driver.get("http://demo.guru99.com/test/drag_drop.html");
 		//driver.get(prop.getProperty("url"));
-		driver.get("http://www.facebook.com");
-		//driver.get("https://www.tiffany.com/");
+		//driver.get("http://www.facebook.com");
+		driver.get("https://www.tiffany.com/");
 	}
 }
