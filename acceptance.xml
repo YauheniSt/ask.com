@@ -16,12 +16,12 @@
   </groups>  
     <classes>  
       
-    // <class name="ask.tests.StudentHomePageTest"/>
+     <class name="ask.tests.StudentHomePageTest"/>
      <class name="ask.tests.LoginTest"/>
- //    <class name="ask.tests.MyGradesTest"/>
-  //   <class name="ask.tests.AssessmentTest"/>
- //    <class name="ask.tests.SubmissionsTest"/>
- //    <class name="ask.tests.GradeTest"/>
+    <class name="ask.tests.MyGradesTest"/>
+     <class name="ask.tests.AssessmentTest"/>
+     <class name="ask.tests.SubmissionsTest"/>
+     <class name="ask.tests.GradeTest"/>
      
     </classes>
   </test> 
