@@ -15,7 +15,29 @@ public class LoginPage extends Base {
 		PageFactory.initElements(driver, this);
 
 	}
-
+	
+	
+	
+	@FindBy(xpath = "//input[@formcontrolname='email']/../../..//mat-error")
+	WebElement emailFieldIsRequired;
+	
+	public boolean getEmailFieldIsRequired() {
+		emailFieldIsRequired.isDisplayed();
+		return true;
+		
+	}
+	
+	@FindBy(xpath = "//input[@formcontrolname='password']/../../..//mat-error")
+	WebElement passwordFieldIsRequired;
+	
+	public boolean getPasswordFieldIsRequired() {
+		passwordFieldIsRequired.isDisplayed();
+		return true;
+		
+	}
+	
+	
+	
 	@FindBy(xpath = "//input[@formcontrolname='email']")
 	WebElement emailField;
 	@FindBy(xpath = "//input[@formcontrolname='password']")

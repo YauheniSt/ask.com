@@ -3,6 +3,7 @@
 <suite name="Failed suite [Suite]" parallel="none">
   <listeners>
     <listener class-name="ask.util.Listener"/>
+    <listener class-name="ask.util.ExtentReporterNG"/>
   </listeners>
   <test name="Test(failed)" parallel="none">
     <groups>
@@ -11,18 +12,36 @@
       </run>
     </groups>
     <classes>
+      <class name="ask.tests.SubmissionsTest">
+        <methods>
+          <include name="submitAssignment"/>
+          <include name="verifySubmissionDisplayed"/>
+        </methods>
+      </class> <!-- ask.tests.SubmissionsTest -->
+      <class name="ask.tests.AssessmentTest">
+        <methods>
+          <include name="createQuiz"/>
+          <include name="completeAssignment1"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- ask.tests.AssessmentTest -->
+      <class name="ask.tests.GradeTest">
+        <methods>
+          <include name="submitAssignment"/>
+          <include name="verifyStudentCanBeGraded"/>
+        </methods>
+      </class> <!-- ask.tests.GradeTest -->
+      <class name="ask.tests.StudentHomePageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="verifyStudentCanCheckGradesAgain"/>
+        </methods>
+      </class> <!-- ask.tests.StudentHomePageTest -->
       <class name="ask.tests.LoginTest">
         <methods>
           <include name="setUp"/>
-          <include name="loginAsStudentTC"/>
         </methods>
       </class> <!-- ask.tests.LoginTest -->
-      <class name="ask.tests.StudentHomePageTest">
-        <methods>
-          <include name="verifyStudentCanCheckGrades"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- ask.tests.StudentHomePageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

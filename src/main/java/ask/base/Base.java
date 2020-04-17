@@ -9,6 +9,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -33,21 +34,22 @@ public class Base {
 	
 
 	public WebDriver browserInit() throws IOException {
+	/*	String hubUrl="http://10.0.0.2:4444/wd/hub";
 		DesiredCapabilities cp=new DesiredCapabilities();
-		cp.setBrowserName("chrome");
-		cp.setPlatform(Platform.WINDOWS);
-		
-		driver=new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),cp);
+		cp.setBrowserName("firefox");
+		cp.setPlatform(Platform.WINDOWS);		
+		driver=new RemoteWebDriver(new URL(hubUrl),cp);
+	*/
 		
 		prop = new Properties();
 		config = new Config();
 		file = new FileInputStream(config.getConfigDir());
 		prop.load(file);
-/*
+
 		if (prop.get("browser").equals("chrome")) {
 			System.setProperty(prop.getProperty("chromeDriver"), prop.getProperty("chromeDriverDir"));
 			driver = new ChromeDriver();
-		} else if (prop.get("browser").equals("gecko")) {
+		} else if (prop.get("browser").equals("firefox")) {
 			System.setProperty(prop.getProperty("geckoDriver"), prop.getProperty("geckoDriverDir"));
 			driver = new FirefoxDriver();
 		}
@@ -55,7 +57,7 @@ public class Base {
 			System.setProperty(prop.getProperty("ieDriver"), prop.getProperty("ieDriverDir"));
 			driver = new InternetExplorerDriver();
 		}
-		*/
+		
 /*		
 	e_driver = new EventFiringWebDriver(driver);
 		// Now create object of EventListerHandler to register it with EventFiringWebDriver

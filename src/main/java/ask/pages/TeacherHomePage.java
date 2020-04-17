@@ -10,7 +10,8 @@ public class TeacherHomePage extends Base {
 	public TeacherHomePage() {
 		PageFactory.initElements(driver, this);
 	}
-
+	
+	
 	@FindBy(xpath = "//p[text()='TEACHER'] ")
 	WebElement teacherLable;
 

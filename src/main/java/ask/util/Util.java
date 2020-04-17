@@ -14,6 +14,9 @@ import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.StaleElementReferenceException;
@@ -37,6 +40,13 @@ public class Util extends Base {
 	public static void refreshBrowser() {
 		driver.navigate().refresh();
 	}
+	@Test
+	public void convertCelsiusToFahrenheit() {
+	       double factor= 9.0/5.0;
+	      // double FT=factor*41+ 32;
+	    System.out.println(factor);
+
+	    }
 
 	public static void switchingsBetweenWindows() {
 		Set<String> it = driver.getWindowHandles();
@@ -118,6 +128,56 @@ public class Util extends Base {
 		return data;
 	}
 
+	
+	
+	public static Object[][] dataGetting(String sheetName) throws IOException {
+	String dir=	System.getProperty("user.dir");
+	String dataDir=dir + "\\src\\main\\\\java\\ask\\testData\\askData.xlsx";
+	String path="C:\\ask.com\\src\\main\\java\\ask\\testData\\askData.xlsx";
+		FileInputStream file=new FileInputStream(path);
+		XSSFWorkbook wb=new XSSFWorkbook(file);
+		XSSFSheet sh=wb.getSheet(sheetName);
+		
+		int rowsNumber=sh.getLastRowNum();
+		int cellsNumber=sh.getRow(0).getLastCellNum();
+		
+		Object[][] data=new	Object[rowsNumber][cellsNumber];	
+		
+		for (int i=0; i<rowsNumber;i++) {
+		XSSFRow currentRow=	sh.getRow(i+1);
+		for(int j=0;j<cellsNumber;j++) {
+			
+		data[i][j]=	currentRow.getCell(j).toString();
+		}
+			
+		}return data;
+		
+	}
+	
+	public static Object[][] dataGetting1(String sheetName) throws IOException {
+		String dir=	System.getProperty("user.dir");
+		String dataDir=dir + "\\src\\main\\\\java\\ask\\testData\\askData.xlsx";
+		String path="C:\\ask.com\\src\\main\\java\\ask\\testData\\askData.xlsx";
+			FileInputStream file=new FileInputStream(path);
+			XSSFWorkbook wb=new XSSFWorkbook(file);
+			XSSFSheet sh=wb.getSheet(sheetName);
+			
+			//int rowsNumber=sh.getLastRowNum();
+			//int cellsNumber=sh.getRow(0).getLastCellNum();
+			
+			Object[][] data=new	Object[6][6];	
+			
+			for (int i=0; i<6;i++) {
+			XSSFRow currentRow=	sh.getRow(i+1);
+			for(int j=0;j<6;j++) {
+				
+			data[i][j]=	currentRow.getCell(j).toString();
+			}
+				
+			}return data;
+			
+		}
+		
 	
 		
 		}
